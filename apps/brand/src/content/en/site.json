@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "shunzz — Build with AI. Ship for real.",
-    "description": "Senior Systems Analyst who ships with AI agents: spec-driven development, enterprise systems, ML models, cloud IaC, Claude Skills and an MCP Gateway.",
+    "description": "AI-Native Software Engineer who ships with AI agents: spec-driven development, enterprise systems, ML models, cloud IaC, Claude Skills and an MCP Gateway.",
     "name": "shunzz",
-    "jobTitle": "Senior Systems Analyst · AI-Native Software Engineer"
+    "jobTitle": "AI-Native Software Engineer · Senior Systems Analyst"
   },
   "nav": {
     "projects": "Projects",
@@ -23,7 +23,7 @@
   },
   "about": {
     "heading": "About",
-    "short": "Japanese Literature major turned software engineer, now a Senior Systems Analyst (JLPT N1). I ship enterprise systems, ML models and cloud infrastructure with a spec-driven, AI-agent workflow; I write Claude Skills, built an MCP Gateway, and teach the workflow internally. In the AI era an engineer's value is judgment and process design, not typing speed.",
+    "short": "Japanese Literature major turned AI-Native Software Engineer (JLPT N1). I ship enterprise systems, ML models and cloud infrastructure with a spec-driven, AI-agent workflow; I write Claude Skills, built an MCP Gateway, and teach the workflow internally. In the AI era an engineer's value is judgment and process design, not typing speed.",
     "acts": [
       {
         "title": "Act 1: An unusual start",
