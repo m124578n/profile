@@ -1,0 +1,31 @@
+---
+import type { Resume } from '../content/schema';
+import type { Locale } from '@shunzz/ui/i18n';
+interface Props { header: Resume['header']; labels: Resume['labels']; locale: Locale }
+const { header, labels, locale } = Astro.props;
+---
+<header class="container resume-header">
+  <div class="row">
+    <div>
+      <h1>{header.name}</h1>
+      <p class="latin" lang={locale === 'en' ? 'zh-Hant' : 'en'}>{header.latinName}</p>
+    </div>
+    <button type="button" class="btn print-btn" data-print>{labels.print}</button>
+  </div>
+  <p class="title">{header.title} · <span class="meta">{header.location}</span></p>
+  <ul class="contacts" role="list">
+    {header.contacts.map((c) => <li role="listitem"><a href={c.href} rel={c.rel}>{c.label}</a></li>)}
+  </ul>
+  <p class="summary">{header.summary}</p>
+</header>
+<style>
+  .resume-header { padding-block: var(--space-5) var(--space-3); }
+  h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 0; }
+  .latin { font-family: var(--font-mono); color: var(--fg-muted); margin: 0; }
+  .title { font-weight: 600; margin-top: var(--space-2); }
+  .contacts { list-style: none; padding: 0; margin: 0 0 var(--space-3); display: flex; flex-wrap: wrap; gap: .4em 1.2em; font-size: .95rem; }
+  .summary { font-size: 1.02rem; }
+</style>
+<script>
+  document.querySelectorAll('[data-print]').forEach((b) => b.addEventListener('click', () => window.print()));
+</script>

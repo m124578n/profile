@@ -114,3 +114,9 @@ test('about 展開動畫:details 帶 data-story 且有對應 inline script', () 
     assert.match(h, /data-story[\s\S]*prefers-reduced-motion/, p);
   }
 });
+
+test('nav 由 links 陣列渲染(含 profile 站連結)', () => {
+  const zh = html('index.html');
+  assert.match(zh, /<nav[^>]*aria-label="主選單"[^>]*>[\s\S]*href="https:\/\/profile\.shunzz\.com"[^>]*rel="me"/);
+  assert.equal((zh.match(/<nav[^>]*>[\s\S]*?<\/nav>/)[0].match(/<a /g) ?? []).length, 5); // 4 links + LangSwitch
+});

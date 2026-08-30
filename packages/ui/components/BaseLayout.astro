@@ -10,8 +10,8 @@ import LangSwitch from './LangSwitch.astro';
 interface Props {
   locale: Locale; title: string; description: string; name: string; jobTitle: string;
   nav: {
-    projects: string; about: string; contact: string; profileSite: string; switchLang: string; toggleTheme: string;
-    primaryNav: string; skipToContent: string;
+    links: { label: string; href: string; rel?: string }[];
+    switchLang: string; toggleTheme: string; primaryNav: string; skipToContent: string;
   };
 }
 const { locale, title, description, name, jobTitle, nav } = Astro.props;
@@ -34,10 +34,7 @@ const { locale, title, description, name, jobTitle, nav } = Astro.props;
     <header class="site-header container">
       <a class="brand" href={locale === 'en' ? '/en/' : '/'}>{name}</a>
       <nav aria-label={nav.primaryNav}>
-        <a href="#projects">{nav.projects}</a>
-        <a href="#about">{nav.about}</a>
-        <a href="#contact">{nav.contact}</a>
-        <a href="https://profile.shunzz.com" rel="me">{nav.profileSite}</a>
+        {nav.links.map((l) => <a href={l.href} rel={l.rel}>{l.label}</a>)}
         <LangSwitch {locale} label={nav.switchLang} />
         <ThemeToggle label={nav.toggleTheme} />
       </nav>

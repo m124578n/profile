@@ -1,0 +1,24 @@
+---
+import type { Resume } from '../content/schema';
+interface Props { items: Resume['skills']; heading: string }
+const { items, heading } = Astro.props;
+---
+<section id="skills" class="section container">
+  <h2>{heading}</h2>
+  <dl class="skills">
+    {items.map((g) => (
+      <div class="skill-row">
+        <dt>{g.group}</dt>
+        <dd><ul class="tags" role="list">{g.items.map((s) => <li class="tag" role="listitem">{s}</li>)}</ul></dd>
+      </div>
+    ))}
+  </dl>
+</section>
+<style>
+  .skills { margin: 0; display: grid; gap: var(--space-2); }
+  .skill-row { display: grid; grid-template-columns: 9rem 1fr; gap: var(--space-3); align-items: start; }
+  dt { font-family: var(--font-mono); font-size: .85rem; color: var(--fg-muted); padding-top: .3em; }
+  dd { margin: 0; }
+  .tags { list-style: none; padding: 0; margin: 0; }
+  @media (max-width: 40rem) { .skill-row { grid-template-columns: 1fr; gap: .3em; } }
+</style>

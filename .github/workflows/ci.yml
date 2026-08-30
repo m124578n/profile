@@ -19,4 +19,7 @@ jobs:
       - run: npm run build
         env:
           FORBIDDEN_TERMS: ${{ secrets.FORBIDDEN_TERMS }}
+      - run: node scripts/check-content.mjs docs README.md packages scripts apps
+        env:
+          FORBIDDEN_TERMS: ${{ secrets.FORBIDDEN_TERMS }}
       - run: npm test

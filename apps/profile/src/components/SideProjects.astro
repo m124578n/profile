@@ -1,0 +1,19 @@
+---
+import type { Resume } from '../content/schema';
+interface Props { items: Resume['sideProjects']; heading: string }
+const { items, heading } = Astro.props;
+---
+<section id="side-projects" class="section container">
+  <h2>{heading}</h2>
+  {items.map((p) => (
+    <article class="entry">
+      <div class="row"><h3>{p.name}</h3>{p.period && <span class="meta">{p.period}</span>}</div>
+      <p>{p.desc}</p>
+      {p.links.length > 0 && <p class="links">{p.links.map((l) => <a href={l.href}>{l.label} <span aria-hidden="true">↗</span></a>)}</p>}
+    </article>
+  ))}
+</section>
+<style>
+  .entry + .entry { margin-top: var(--space-4); padding-top: var(--space-3); }
+  .links { display: flex; gap: var(--space-3); }
+</style>

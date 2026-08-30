@@ -1,0 +1,13 @@
+---
+import type { Resume } from '../content/schema';
+import type { Locale } from '@shunzz/ui/i18n';
+interface Props { footer: Resume['footer']; labels: Resume['labels']; locale: Locale }
+const { footer, labels, locale } = Astro.props;
+const year = new Date().getFullYear();
+---
+<footer id="contact" class="section container resume">
+  <h2>{labels.contact}</h2>
+  <p><a class="btn primary" href={`mailto:${footer.email}`}>{footer.email}</a></p>
+  <p class="meta no-print">{footer.note}</p>
+  <p class="meta">© {year} shunzz · <a href="https://shunzz.com" rel="me">{labels.backToBrand}</a> · <a href={locale === 'en' ? '/' : '/en/'}>{locale === 'en' ? '中文' : 'English'}</a></p>
+</footer>

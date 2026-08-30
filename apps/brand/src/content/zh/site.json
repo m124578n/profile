@@ -6,10 +6,12 @@
     "jobTitle": "AI-Native Software Engineer · Senior Systems Analyst"
   },
   "nav": {
-    "projects": "專案",
-    "about": "關於我",
-    "contact": "聯絡",
-    "profileSite": "專業履歷版",
+    "links": [
+      { "label": "專案", "href": "#projects" },
+      { "label": "關於我", "href": "#about" },
+      { "label": "聯絡", "href": "#contact" },
+      { "label": "專業履歷版", "href": "https://profile.shunzz.com", "rel": "me" }
+    ],
     "switchLang": "English",
     "toggleTheme": "切換深淺色",
     "primaryNav": "主選單",
@@ -47,7 +49,7 @@
         "title": "用 AI 交付產品",
         "points": [
           "企業級零售配貨平台，2.5 個月獨立交付",
-          "AI 求職助手 Career Agent,3 天上線、有真實使用者",
+          "AI 求職助手 Career Agent，3 天上線、有真實使用者",
           "Flask 每日工作紀錄系統，1 天、62 個測試"
         ]
       },
