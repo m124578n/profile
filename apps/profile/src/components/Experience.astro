@@ -19,7 +19,7 @@ const { items, heading } = Astro.props;
         </div>
       ))}
       {e.bullets.length > 0 && <ul>{e.bullets.map((b) => <li>{b}</li>)}</ul>}
-      <ul class="tags">{e.stack.map((s) => <li class="tag">{s}</li>)}</ul>
+      <ul class="tags" role="list">{e.stack.map((s) => <li class="tag" role="listitem">{s}</li>)}</ul>
     </article>
   ))}
 </section>

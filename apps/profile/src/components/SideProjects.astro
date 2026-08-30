@@ -9,7 +9,7 @@ const { items, heading } = Astro.props;
     <article class="entry">
       <div class="row"><h3>{p.name}</h3>{p.period && <span class="meta">{p.period}</span>}</div>
       <p>{p.desc}</p>
-      {p.links.length > 0 && <p class="links">{p.links.map((l) => <a href={l.href} rel="noopener">{l.label} <span aria-hidden="true">↗</span></a>)}</p>}
+      {p.links.length > 0 && <p class="links">{p.links.map((l) => <a href={l.href}>{l.label} <span aria-hidden="true">↗</span></a>)}</p>}
     </article>
   ))}
 </section>

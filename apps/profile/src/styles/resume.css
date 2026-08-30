@@ -1,6 +1,6 @@
 .resume { --measure: 78ch; }
-.resume .section { padding-block: var(--space-5); }
-.resume h2 { font-size: 1.25rem; letter-spacing: .02em; text-transform: uppercase; font-family: var(--font-mono); color: var(--fg-muted); margin-bottom: var(--space-3); }
+.resume .section, footer.section { padding-block: var(--space-5); }
+.resume h2, footer.section h2 { font-size: 1.25rem; letter-spacing: .02em; text-transform: uppercase; font-family: var(--font-mono); color: var(--fg-muted); margin-bottom: var(--space-3); }
 .resume h3 { font-size: 1.05rem; margin: 0; }
 .resume ul { padding-left: 1.1em; margin: .3em 0 0; }
 .resume li + li { margin-top: .35em; }
@@ -14,12 +14,15 @@
 .print-btn { font: inherit; }
 
 @media print {
-  :root { --bg: #fff; --bg-elev: #fff; --fg: #000; --fg-muted: #444; --line: #bbb; --accent: #000; }
+  :root, :root[data-theme="dark"], :root[data-theme="light"] { --bg: #fff; --bg-elev: #fff; --fg: #000; --fg-muted: #444; --line: #bbb; --accent: #000; }
+  html, html[data-theme="dark"] { color-scheme: light; }
   @page { size: A4; margin: 14mm; }
   html { font-size: 11pt; }
   .site-header, .skip-link, .print-btn, .theme-toggle, .lang, .no-print { display: none !important; }
-  .resume .section { padding-block: 8pt; border-top: none; break-inside: avoid-page; }
+  .resume .section, footer.section { padding-block: 8pt; border-top: none; }
   .entry, .group, article { break-inside: avoid; }
+  .resume h2, .resume h3, .group h4 { break-after: avoid; }
+  .resume p, .resume li { orphans: 3; widows: 3; }
   a { color: #000; text-decoration: none; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8.5pt; color: #444; }
   a[href^="mailto:"]::after { content: ""; }

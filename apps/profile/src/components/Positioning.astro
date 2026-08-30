@@ -5,8 +5,8 @@ const { items, heading } = Astro.props;
 ---
 <section id="positioning" class="section container">
   <h2>{heading}</h2>
-  <ol class="three">
-    {items.map((p) => <li><h3>{p.title}</h3><p>{p.body}</p></li>)}
+  <ol class="three" role="list">
+    {items.map((p) => <li role="listitem"><h3>{p.title}</h3><p>{p.body}</p></li>)}
   </ol>
 </section>
 <style>

@@ -9,7 +9,7 @@ const { items, heading } = Astro.props;
     {items.map((g) => (
       <div class="skill-row">
         <dt>{g.group}</dt>
-        <dd><ul class="tags">{g.items.map((s) => <li class="tag">{s}</li>)}</ul></dd>
+        <dd><ul class="tags" role="list">{g.items.map((s) => <li class="tag" role="listitem">{s}</li>)}</ul></dd>
       </div>
     ))}
   </dl>

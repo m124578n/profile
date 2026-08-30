@@ -34,6 +34,12 @@ test('履歷 sections 與 landmark', () => {
   assert.match(zh, /@media print/);
   assert.match(zh, /<button[^>]*data-print/);
 });
+test('print 樣式覆蓋深色主題;footer 套用 resume 樣式;清單具備 a11y role', () => {
+  const zh = html('index.html');
+  assert.match(zh, /@media print[\s\S]*?data-theme=["']?dark/);
+  assert.match(zh, /<footer[^>]*class="[^"]*\bresume\b[^"]*"/);
+  assert.ok((zh.match(/role="list"/g) ?? []).length >= 4);
+});
 test('en 履歷內容', () => {
   const en = html('en/index.html');
   assert.match(en, /Jung Shing International/);
