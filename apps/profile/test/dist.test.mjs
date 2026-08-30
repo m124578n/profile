@@ -23,3 +23,19 @@ test('SEO 基本標籤指向 profile.shunzz.com', () => {
   assert.match(zh, /"@type":"Person"/);
   assert.match(html('en/index.html'), /<link rel="canonical" href="https:\/\/profile\.shunzz\.com\/en\/"/);
 });
+test('履歷 sections 與 landmark', () => {
+  const zh = html('index.html');
+  for (const id of ['experience', 'side-projects', 'skills', 'education']) assert.match(zh, new RegExp(`id="${id}"`), id);
+  assert.match(zh, /<h1[^>]*>詹舜智<\/h1>/);
+  assert.match(zh, /OSENSE Technology/);
+  assert.match(zh, /忠訓國際/);
+  assert.match(zh, /<\/main>[\s\S]*<footer/);
+  assert.match(zh, /mailto:m23568n@gmail\.com/);
+  assert.match(zh, /@media print/);
+  assert.match(zh, /<button[^>]*data-print/);
+});
+test('en 履歷內容', () => {
+  const en = html('en/index.html');
+  assert.match(en, /Jung Shing International/);
+  assert.match(en, /Retail allocation platform/);
+});

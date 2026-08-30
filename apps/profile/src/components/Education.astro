@@ -1,0 +1,28 @@
+---
+import type { Resume } from '../content/schema';
+interface Props { education: Resume['education']; languages: Resume['languages']; labels: Resume['labels'] }
+const { education, languages, labels } = Astro.props;
+---
+<section id="education" class="section container two">
+  <div>
+    <h2>{labels.education}</h2>
+    {education.map((e) => (
+      <div class="entry-sm">
+        <div class="row"><h3>{e.school}</h3><span class="meta">{e.period}</span></div>
+        <p class="meta">{e.degree}</p>
+      </div>
+    ))}
+  </div>
+  <div>
+    <h2>{labels.languages}</h2>
+    <dl class="langs">{languages.map((l) => (<div><dt>{l.name}</dt><dd>{l.level}</dd></div>))}</dl>
+  </div>
+</section>
+<style>
+  .two { display: grid; gap: var(--space-5); grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+  .entry-sm + .entry-sm { margin-top: var(--space-3); }
+  .langs { margin: 0; display: grid; gap: .5em; }
+  .langs div { display: grid; grid-template-columns: 5rem 1fr; gap: var(--space-2); }
+  .langs dt { font-family: var(--font-mono); color: var(--fg-muted); font-size: .85rem; }
+  .langs dd { margin: 0; }
+</style>

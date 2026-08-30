@@ -1,0 +1,30 @@
+---
+import type { Resume } from '../content/schema';
+interface Props { items: Resume['experience']; heading: string }
+const { items, heading } = Astro.props;
+---
+<section id="experience" class="section container">
+  <h2>{heading}</h2>
+  {items.map((e) => (
+    <article class="entry">
+      <div class="row">
+        <h3>{e.company} <span class="role">— {e.role}</span></h3>
+        <span class="meta">{e.period} · {e.location}</span>
+      </div>
+      {e.intro && <p class="intro">{e.intro}</p>}
+      {e.groups?.map((g) => (
+        <div class="group">
+          <h4>{g.name}</h4>
+          <ul>{g.bullets.map((b) => <li>{b}</li>)}</ul>
+        </div>
+      ))}
+      {e.bullets.length > 0 && <ul>{e.bullets.map((b) => <li>{b}</li>)}</ul>}
+      <ul class="tags">{e.stack.map((s) => <li class="tag">{s}</li>)}</ul>
+    </article>
+  ))}
+</section>
+<style>
+  .role { font-weight: 400; color: var(--fg-muted); }
+  .intro { color: var(--fg-muted); margin-top: .3em; }
+  .tags { list-style: none; padding: 0; }
+</style>

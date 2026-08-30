@@ -1,9 +1,25 @@
 ---
 import BaseLayout from '@shunzz/ui/components/BaseLayout.astro';
+import '../styles/resume.css';
 import { loadResume } from '../content/load';
+import ResumeHeader from '../components/ResumeHeader.astro';
+import Positioning from '../components/Positioning.astro';
+import Experience from '../components/Experience.astro';
+import SideProjects from '../components/SideProjects.astro';
+import Skills from '../components/Skills.astro';
+import Education from '../components/Education.astro';
+import ResumeFooter from '../components/ResumeFooter.astro';
 const locale = 'zh-hant' as const;
 const r = loadResume(locale);
 ---
 <BaseLayout {locale} title={r.meta.title} description={r.meta.description} name={r.meta.name} jobTitle={r.meta.jobTitle} nav={r.nav}>
-  <section class="container"><h1>{r.header.name}</h1></section>
+  <div class="resume">
+    <ResumeHeader header={r.header} labels={r.labels} />
+    <Positioning items={r.positioning} heading={r.labels.positioning} />
+    <Experience items={r.experience} heading={r.labels.experience} />
+    <SideProjects items={r.sideProjects} heading={r.labels.sideProjects} />
+    <Skills items={r.skills} heading={r.labels.skills} />
+    <Education education={r.education} languages={r.languages} labels={r.labels} />
+  </div>
+  <ResumeFooter slot="footer" footer={r.footer} labels={r.labels} {locale} />
 </BaseLayout>

@@ -1,0 +1,17 @@
+---
+import type { Resume } from '../content/schema';
+interface Props { items: Resume['positioning']; heading: string }
+const { items, heading } = Astro.props;
+---
+<section id="positioning" class="section container">
+  <h2>{heading}</h2>
+  <ol class="three">
+    {items.map((p) => <li><h3>{p.title}</h3><p>{p.body}</p></li>)}
+  </ol>
+</section>
+<style>
+  .three { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); counter-reset: n; }
+  .three li { padding: var(--space-3); border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-elev); }
+  .three li::before { counter-increment: n; content: "0" counter(n); font-family: var(--font-mono); color: var(--accent); display: block; margin-bottom: .3em; }
+  .three p { margin: .3em 0 0; font-size: .95rem; color: var(--fg-muted); }
+</style>
