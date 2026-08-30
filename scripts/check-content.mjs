@@ -6,7 +6,7 @@ import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
 import { join, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const EXT = new Set(['.json', '.html', '.astro', '.md', '.ts', '.js', '.txt', '.xml']);
+const EXT = new Set(['.json', '.html', '.astro', '.md', '.ts', '.js', '.mjs', '.css', '.txt', '.xml']);
 
 function loadTerms() {
   const envTerms = (process.env.FORBIDDEN_TERMS ?? '')
@@ -42,6 +42,7 @@ function* walk(p) {
     return;
   }
   for (const name of readdirSync(p)) {
+    if (name === 'node_modules') continue;
     yield* walk(join(p, name));
   }
 }
