@@ -1,0 +1,9 @@
+---
+import BaseLayout from '@shunzz/ui/components/BaseLayout.astro';
+import { loadResume } from '../../content/load';
+const locale = 'en' as const;
+const r = loadResume(locale);
+---
+<BaseLayout {locale} title={r.meta.title} description={r.meta.description} name={r.meta.name} jobTitle={r.meta.jobTitle} nav={r.nav}>
+  <section class="container"><h1>{r.header.name}</h1></section>
+</BaseLayout>

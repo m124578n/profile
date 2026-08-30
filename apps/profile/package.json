@@ -1,0 +1,24 @@
+{
+  "name": "@shunzz/profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node ../../scripts/check-content.mjs",
+    "check": "astro check",
+    "preview": "astro preview",
+    "test": "node --test test/*.test.mjs",
+    "check:content": "node ../../scripts/check-content.mjs",
+    "og": "node ../../scripts/gen-og.mjs --out public/og.png --eyebrow profile.shunzz.com --l1 \"Chan Shun-Chih\" --l2 \"AI-Native Software Engineer\" --sub \"Résumé · Python · Azure · React · MCP · JLPT N1\""
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@shunzz/ui": "*",
+    "astro": "^7.2.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3"
+  }
+}

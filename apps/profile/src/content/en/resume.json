@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "title": "Chan Shun-Chih — AI-Native Software Engineer Résumé",
+    "description": "Résumé of Chan Shun-Chih: AI-Native Software Engineer · Senior Systems Analyst — spec-driven AI-agent workflow, enterprise systems, ML, cloud IaC. JLPT N1.",
+    "name": "Chan Shun-Chih (詹舜智)",
+    "jobTitle": "AI-Native Software Engineer · Senior Systems Analyst"
+  },
+  "nav": {
+    "links": [
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Projects", "href": "#side-projects" },
+      { "label": "Skills", "href": "#skills" },
+      { "label": "Brand site", "href": "https://shunzz.com", "rel": "me" }
+    ],
+    "switchLang": "中文",
+    "toggleTheme": "Toggle theme",
+    "primaryNav": "Primary",
+    "skipToContent": "Skip to content"
+  },
+  "labels": {
+    "positioning": "Three layers",
+    "experience": "Experience",
+    "sideProjects": "Side projects & contributions",
+    "skills": "Tech stack",
+    "education": "Education",
+    "languages": "Languages",
+    "contact": "Contact",
+    "print": "Print / save as PDF",
+    "backToBrand": "Back to shunzz.com"
+  },
+  "header": {
+    "name": "Chan Shun-Chih",
+    "latinName": "詹舜智 · shunzz",
+    "title": "AI-Native Software Engineer · Senior Systems Analyst",
+    "location": "Taipei, Taiwan",
+    "contacts": [
+      { "label": "m23568n@gmail.com", "href": "mailto:m23568n@gmail.com" },
+      { "label": "github.com/m124578n", "href": "https://github.com/m124578n", "rel": "me" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/john19980215/", "rel": "me" },
+      { "label": "Threads @m23568n", "href": "https://www.threads.net/@m23568n", "rel": "me" }
+    ],
+    "summary": "Four years of Python backend and AI application engineering. I specialize in spec-driven development with AI agents (Claude Code, GitHub Copilot CLI; the open-source superpowers workflow, tuned per project), independently delivering enterprise systems, ML models, cloud IaC and consumer products — then institutionalizing the workflow through internal talks, reusable Claude Skills with evals, and a self-built MCP Gateway serving as company-wide AI infrastructure. Previously led two AI video-generation products from zero to 7,000+ users, halving monthly infrastructure cost ($40K → $20K) and cutting failure rate from 30% to under 1%. JLPT N1."
+  },
+  "positioning": [
+    { "title": "Ship products with AI", "body": "Enterprise projects and side projects, with speed and quality in the git history: an allocation platform in 2.5 months, an MCP Gateway live in 3 days, a 62-test app in one day." },
+    { "title": "Manage how AI works", "body": "Spec first, TDD, an automated AI code-review loop, prompt governance; one shared AGENTS.md driving both Claude Code and Copilot CLI." },
+    { "title": "Build tools for AI", "body": "A self-built MCP Gateway, Claude Agent Skills with evals, project-specific skills (e.g. an Azure DevOps PR flow) — and internal advocacy." }
+  ],
+  "experience": [
+    {
+      "company": "IT subsidiary of a retail group",
+      "role": "Senior Systems Analyst (AI Application Engineer)",
+      "period": "May 2026 – present",
+      "location": "Taipei",
+      "intro": "Cloud architecture and AI application development across cloud architecture, DevOps, data engineering and AI products.",
+      "groups": [
+        {
+          "name": "Retail allocation platform (primary project)",
+          "bullets": [
+            "Independently delivered an enterprise retail allocation platform (1,100+ files) in 2.5 months with AI collaboration; heavy requirements interviews, allocation logic designed from per-store sales data and special cases",
+            "Backend Python 3.12 / FastAPI / SQLAlchemy 2 / Alembic / PostgreSQL in a layered architecture (api / core / engine / etl / repositories / services); frontend React 19 + TypeScript / Vite / TanStack Query·Table·Virtual / react-hook-form + zod / Tailwind 4",
+            "Contract-first: openapi.json → openapi-typescript generates frontend types, keeping both sides in sync",
+            "CI/CD on Azure Pipelines: PRs run backend pytest and frontend lint/test/build in parallel; 8 backend test modules, 56 frontend test files, UAT smoke tests",
+            "Requirement alignment via single-file HTML prototypes that stakeholders preview before real development, cutting the spec → build → acceptance cycle; disciplined docs (decisions / lessons / runbooks / roadmap)"
+          ]
+        },
+        {
+          "name": "Demand-allocation ML models",
+          "bullets": [
+            "Store-level allocation forecasting with LightGBM, CatBoost, Optuna tuning and isotonic calibration",
+            "Systematic pipeline: baseline → feature engineering → ablation → blending → rules overlay → misallocation diagnosis; delivered ML allocation plan draft, ER model and table schema"
+          ]
+        },
+        {
+          "name": "Enterprise Customer Data Platform (6 repos / 2,200+ files)",
+          "bullets": [
+            "React 19 + TS + TanStack Router/Query frontend, .NET 8 Web API, .NET 8 batch system with unit tests; SQL Server multi-schema design + Azure Synapse warehouse (CTAS / HASH-distributed tuning)",
+            "AI API: Python 3.13 + FastAPI + Google ADK agent pipeline + LiteLLM → Azure OpenAI; automated product tagging (migrated from a legacy service) and a 3-stage marketing-copy pipeline; strict API contract (four status codes, per-user rate limiting, fail-honestly-no-fallback)",
+            "Three environments (dev/test/prod) per repo on Azure DevOps pipelines; incident records and architecture runbooks"
+          ]
+        },
+        {
+          "name": "MCP Gateway (self-built AI infrastructure)",
+          "bullets": [
+            "Wraps internal HTTP APIs as MCP tools so Claude Code / Codex / Copilot reach internal systems through one secure entry point; tool catalog in DB, approved tools go live without code changes or restarts",
+            "Security: per-client Bearer auth, SSRF protection (blocks localhost/cloud metadata + allowlist), Fernet-encrypted upstream credentials, audit logs with sensitive-parameter masking",
+            "Python 3.12 / MCP SDK (Streamable HTTP) / Starlette / SQLAlchemy 2 / Streamlit admin; 20+ test files incl. acceptance tests (pytest-asyncio + respx); v1 live in 3 days"
+          ]
+        },
+        {
+          "name": "Log anomaly analysis",
+          "bullets": [
+            "Gradio UI with two-stage filtering of large logs → Azure OpenAI analysis → SQLite; strict three-layer decoupling (filter / ai / db); token and cost estimation before each AI call with threshold warnings"
+          ]
+        },
+        {
+          "name": "Enterprise chatbot product deployment",
+          "bullets": [
+            "Source governance and dockerization of an enterprise chatbot product (Java/JSP/Kotlin, 700+ files): Compose with MSSQL 2022, Redis Stack, Solr 9.5, custom parser; DB init, health checks, fresh-VM deployment SOP; git filter-repo history cleanup, Git LFS"
+          ]
+        },
+        {
+          "name": "Azure IaC & data engineering",
+          "bullets": [
+            "Modular Bicep IaC (network / keyvault / storage / postgres / appservice): IP allowlist + Private Endpoint dual path, Key Vault secrets, VNet Integration + RBAC, rollback docs",
+            "Dify (open-source LLM platform) on Azure Container Apps (PostgreSQL + pgvector / Redis / Storage, with cost estimate); Terraform for LLM resource groups; ADF pipeline analysis and design (auto-ordering / inventory / sales forecasting), ML pipeline retry/webhook design"
+          ]
+        },
+        {
+          "name": "AI engineering methodology (institutionalized)",
+          "bullets": [
+            "One shared AGENTS.md driving Claude Code and Copilot CLI on enterprise projects; git worktree for parallel branches",
+            "Adopted and operated the agent-skill toolchain (open-source superpowers workflow) and built an automated AI code-review loop (AI fixes → commit → replies to review thread → re-review until it converges)",
+            "Packaged team domain knowledge as Claude Skills with evals (Azure Synapse tuning, ADF standards) plus project-specific skills (e.g. an Azure DevOps PR flow)",
+            "Internal tech talk on the requirement → AI prototype → user alignment → build workflow (14-page outline, script, 4 diagrams) with 5 reusable de-projectized skills"
+          ]
+        }
+      ],
+      "bullets": [],
+      "stack": ["Python", "FastAPI", "React 19", "TypeScript", ".NET 8", "PostgreSQL", "SQL Server", "Azure Synapse", "Azure Data Factory", "Azure Container Apps", "Bicep", "Terraform", "Google ADK", "Azure OpenAI", "MCP", "LightGBM", "CatBoost", "Azure Pipelines", "Claude Code", "GitHub Copilot CLI"]
+    },
+    {
+      "company": "OSENSE Technology",
+      "role": "Software Engineer (AI Application Engineer)",
+      "period": "May 2024 – Dec 2025",
+      "location": "Taipei",
+      "bullets": [
+        "Led OVideo, an AI-driven content-to-video platform serving 1,800+ users, incl. membership, subscriptions, payment integration and Azure deployment",
+        "Designed the full video-generation pipeline: LLMs (GPT-4, Claude, Gemini) for content analysis, scripting and image-text matching; FFmpeg for processing, subtitles and encoding; async tasks with Server-Sent Events progress",
+        "Performance and cost: parallelized the pipeline to cut average generation time from 30 to 15 minutes (-50%); re-architected Azure services to halve monthly infrastructure cost ($40,000 → $20,000); serverless architecture scaled capacity from 10 to 100+ concurrent users; 1,100+ videos processed",
+        "Introduced Clean Architecture, cutting new-feature development time by 50%; designed a PostgreSQL / MongoDB hybrid for high concurrency",
+        "Built Osense AI, a LINE-based AI avatar and voice-cloning system (5,400+ users): lip-sync and voice cloning, full LINE Bot user flows; fixed upstream open-source bugs and error handling to cut failure rate from 30% to under 1%",
+        "Rapid PoCs with Gradio and light frontends for client demos; introduced AI tooling to speed up development"
+      ],
+      "stack": ["FastAPI", "Celery", "PostgreSQL", "MongoDB", "Azure (VM, Container Apps)", "Docker", "FFmpeg", "Wav2Lip", "TTS (Azure Speech, ElevenLabs)"]
+    },
+    {
+      "company": "Jung Shing International",
+      "role": "Software Engineer (Backend)",
+      "period": "Jul 2022 – Apr 2024",
+      "location": "Taipei",
+      "bullets": [
+        "Built internal web systems with Django: table design from requirements interviews, API and flow planning; Django + jQuery integration with GitLab CI/CD",
+        "Developed and maintained scrapers with Selenium and Requests; optimized existing scrapers and anti-bot handling",
+        "Built a PDF invoice extraction tool that captures key fields into the database, reducing manual entry to a field check",
+        "Introduced GitLab version control and a basic development process; applied the Repository Pattern to isolate data access"
+      ],
+      "stack": ["Python", "Django", "Selenium", "Requests", "GitLab CI", "jQuery", "Linux"]
+    }
+  ],
+  "sideProjects": [
+    {
+      "name": "Career Agent — AI job-search assistant",
+      "period": "Jun 2026 – ongoing",
+      "desc": "Upload résumé → AI diagnosis → crawl listings → semantic fit ranking (score + reasons + missing skills) → tailored cover letters → application tracking; cloud multi-user and local personal-assistant architectures. FastAPI + MongoDB + Claude API + Playwright; React + TS + Mantine; 73 commits in 3 days, 10K+ views on the launch post, real users. Built end-to-end with the Claude Code + superpowers agentic workflow: I owned requirements, architecture, task breakdown and review.",
+      "links": [
+        { "label": "Live", "href": "https://career-agent-at2.pages.dev" },
+        { "label": "GitHub", "href": "https://github.com/m124578n/career_agent" }
+      ]
+    },
+    {
+      "name": "Suancui (酸脆) — Threads AI roast generator",
+      "period": "2026",
+      "desc": "Viral-loop design (share to unlock hidden styles); TypeScript npm-workspaces monorepo: React frontend, Cloudflare Workers + Hono + KV, swappable scraping layer (self-hosted GraphQL crawler / third-party API fallback); four packages each with vitest tests; anti-fabrication and anti-harassment guardrails. 67 commits in one day.",
+      "links": []
+    },
+    {
+      "name": "Daily work-log system",
+      "period": "2026",
+      "desc": "Flask + SQLAlchemy; full spec-driven flow (design spec → implementation plan → TDD), ~2,100 lines, 62 tests, built in one day.",
+      "links": []
+    },
+    {
+      "name": "iThome Ironman 2023: Django source-code deep dive",
+      "period": "Sep – Oct 2023",
+      "desc": "A 30-day series tracing Django internals from everyday commands and APIs into request handling, the ORM and middleware.",
+      "links": [{ "label": "Blog", "href": "https://m124578n.github.io" }]
+    },
+    {
+      "name": "Other",
+      "desc": "Reverse-engineered an undocumented Central Weather Administration API (typhoon storm-radius probability); Text-to-SQL experiments (Vanna + Wren Engine semantic layer); personal RAG agent (chromadb); 56+ posts on a Hexo tech blog.",
+      "links": []
+    }
+  ],
+  "skills": [
+    { "group": "Languages", "items": ["Python (primary)", "TypeScript", "C# / .NET 8", "SQL (SQL Server / Synapse / PostgreSQL)", "Bicep / Terraform"] },
+    { "group": "Backend", "items": ["FastAPI", "Flask", "Django", "Starlette", "Hono", "SQLAlchemy 2 + Alembic", "Celery", "async (asyncio / asyncpg / motor)", "RESTful API", "SSE / WebSocket"] },
+    { "group": "Frontend", "items": ["React 18/19 + TS", "Vite", "TanStack (Query / Table / Router / Virtual)", "Tailwind", "zod", "Mantine"] },
+    { "group": "AI / LLM", "items": ["Claude API", "Azure OpenAI", "GPT-4 / Gemini", "Google ADK", "LiteLLM", "MCP (self-built server)", "RAG / chromadb", "Prompt engineering", "Claude Skills + evals", "FFmpeg / Wav2Lip / TTS", "Token cost control"] },
+    { "group": "Cloud / DevOps", "items": ["Azure (DevOps Pipelines, Bicep, Terraform, Synapse, Data Factory, Container Apps, Key Vault, Private Endpoint)", "Cloudflare (Workers / Pages / KV)", "Docker", "Git LFS / git worktree", "GitLab CI", "uv / ruff"] },
+    { "group": "ML", "items": ["LightGBM", "CatBoost", "Optuna", "scikit-learn"] },
+    { "group": "Scraping", "items": ["Playwright", "Selenium", "Requests / curl_cffi", "BeautifulSoup", "Anti-bot handling"] },
+    { "group": "Testing / architecture", "items": ["pytest (asyncio / respx)", "vitest + Testing Library", "xUnit", "TDD", "UAT smoke / acceptance tests", "Clean Architecture", "Repository Pattern", "Design patterns"] }
+  ],
+  "education": [
+    { "school": "Workforce Development Agency — AI Cloud Web Application Development Program", "degree": "Full-time intensive, 6 months", "period": "Dec 2021 – May 2022" },
+    { "school": "Wenzao Ursuline University of Languages", "degree": "B.A. in Japanese", "period": "Sep 2016 – Jun 2020" }
+  ],
+  "languages": [
+    { "name": "Chinese", "level": "Native" },
+    { "name": "Japanese", "level": "JLPT N1 (listening/reading/writing advanced, speaking intermediate)" },
+    { "name": "English", "level": "Technical reading and writing; Dev.to articles and English specs" }
+  ],
+  "footer": {
+    "email": "m23568n@gmail.com",
+    "note": "This page is print-friendly — press Ctrl/⌘ + P to save as PDF."
+  }
+}
