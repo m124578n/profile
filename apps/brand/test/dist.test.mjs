@@ -120,3 +120,9 @@ test('nav 由 links 陣列渲染(含 profile 站連結)', () => {
   assert.match(zh, /<nav[^>]*aria-label="主選單"[^>]*>[\s\S]*href="https:\/\/profile\.shunzz\.com"[^>]*rel="me"/);
   assert.equal((zh.match(/<nav[^>]*>[\s\S]*?<\/nav>/)[0].match(/<a /g) ?? []).length, 5); // 4 links + LangSwitch
 });
+
+test('翻面卡 hover 只在 (hover: hover) 裝置啟用', () => {
+  const zh = html('index.html');
+  assert.match(zh, /@media \(hover:\s*hover\) and \(pointer:\s*fine\)\{[^}]*\.card[^{]*:hover/);
+  assert.doesNotMatch(zh, /\}\.card\[[^\]]*\]:hover [^{]*\{transform/); // 沒有未包在 media query 裡的 hover 翻面
+});

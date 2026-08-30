@@ -34,7 +34,11 @@ const { projects } = Astro.props;
   .card { perspective: 1200px; }
   .card.featured { grid-column: 1 / -1; }
   .inner { position: relative; inline-size: 100%; display: grid; transition: transform .6s var(--ease); transform-style: preserve-3d; }
-  .card:hover .inner, .card.is-flipped .inner { transform: rotateY(180deg); }
+  .card.is-flipped .inner { transform: rotateY(180deg); }
+  /* hover 翻面只給真的有滑鼠的裝置;觸控裝置的 sticky hover 會和按鈕打架 */
+  @media (hover: hover) and (pointer: fine) {
+    .card:hover .inner { transform: rotateY(180deg); }
+  }
   .face {
     grid-area: 1 / 1; padding: var(--space-4); border: 1px solid var(--line); border-radius: var(--radius);
     background: var(--bg-elev); backface-visibility: hidden; display: flex; flex-direction: column; gap: var(--space-2);
@@ -66,10 +70,12 @@ const { projects } = Astro.props;
       b.addEventListener('click', () => {
         card.classList.toggle('is-flipped');
         sync();
-        (card.classList.contains('is-flipped') ? back : front).querySelector<HTMLElement>('[data-flip]')?.focus();
+        (card.classList.contains('is-flipped') ? back : front).querySelector<HTMLElement>('[data-flip]')?.focus({ preventScroll: true });
       }));
 
-    card.addEventListener('mouseenter', () => { hovering = true; sync(); });
-    card.addEventListener('mouseleave', () => { hovering = false; sync(); });
+    if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      card.addEventListener('mouseenter', () => { hovering = true; sync(); });
+      card.addEventListener('mouseleave', () => { hovering = false; sync(); });
+    }
   });
 </script>
