@@ -53,7 +53,7 @@ test('projects/proof/footer 渲染', () => {
   const zh = html('index.html');
   assert.match(zh, /id="projects"/);
   assert.equal((zh.match(/class="card[" ]/g) ?? []).length, 4);
-  assert.match(zh, /href="https:\/\/career-agent-at2\.pages\.dev"/);
+  assert.match(zh, /href="https:\/\/jobtracker\.shunzz\.com"/);
   assert.match(zh, /id="contact"/);
   assert.match(zh, /mailto:m23568n@gmail\.com/);
 });
