@@ -31,7 +31,7 @@
       },
       {
         "title": "第二幕:AI 改變了我做事的方式",
-        "body": "過去一年，我把開發流程重構成「規格驅動 + AI Agent 執行」:需求 → brainstorm → design spec → implementation plan → TDD 實作。AI 負責執行、我負責審查與決策。用這套流程，我獨立交付了企業級配貨平台(2.5 個月)、CDP 的 AI 服務、demand-forecasting ML 模型，也在 3 天內做出公司的 MCP Gateway、1 天做出有 62 個測試的完整應用。每個數字都在 git 歷史裡。"
+        "body": "過去一年，我把開發流程改成「規格驅動 + AI Agent 執行」:採用開源的 superpowers 工作流(brainstorm → design spec → implementation plan → TDD)，AI 負責執行、我負責審查與決策，並依實戰需求調整成自己的版本——共用 AGENTS.md 同時駕馭兩套 agent、自動化 AI code review 迴圈，也在流程中加上專案專用的 skills(例如 Azure DevOps PR 流程)。用這套流程，我獨立交付了企業級配貨平台(2.5 個月)、CDP 的 AI 服務、demand-forecasting ML 模型，也在 3 天內做出公司的 MCP Gateway、1 天做出有 62 個測試的完整應用。每個數字都在 git 歷史裡。"
       },
       {
         "title": "第三幕:從使用者變成建設者",
@@ -54,7 +54,7 @@
       {
         "title": "管理 AI 的方法論",
         "points": [
-          "規格驅動:brainstorm → spec → plan → TDD",
+          "規格驅動(superpowers 工作流):brainstorm → spec → plan → TDD，再加上專案專用 skills",
           "共用 AGENTS.md 同時駕馭 Claude Code 與 Copilot CLI",
           "自動化 AI code review 迴圈，直到收斂"
         ]

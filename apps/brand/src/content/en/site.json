@@ -31,7 +31,7 @@
       },
       {
         "title": "Act 2: AI changed how I work",
-        "body": "Over the past year I rebuilt my workflow around spec-driven development with AI agents: requirements → brainstorm → design spec → implementation plan → TDD. AI executes; I review and decide. With it I independently delivered an enterprise allocation platform (2.5 months), the AI service of a Customer Data Platform, demand-forecasting ML models, a company MCP Gateway in 3 days, and a full app with 62 tests in one day. Every number is in the git history."
+        "body": "Over the past year I moved my workflow to spec-driven development with AI agents: I adopted the open-source superpowers workflow (brainstorm → design spec → implementation plan → TDD), where AI executes and I review and decide, then tuned it for real projects — one shared AGENTS.md driving two agents, an automated AI code-review loop, and project-specific skills added to the flow (e.g. an Azure DevOps PR skill). With it I independently delivered an enterprise allocation platform (2.5 months), the AI service of a Customer Data Platform, demand-forecasting ML models, a company MCP Gateway in 3 days, and a full app with 62 tests in one day. Every number is in the git history."
       },
       {
         "title": "Act 3: From user to builder",
@@ -54,7 +54,7 @@
       {
         "title": "Manage how AI works",
         "points": [
-          "Spec-driven: brainstorm → spec → plan → TDD",
+          "Spec-driven (superpowers workflow): brainstorm → spec → plan → TDD, plus project-specific skills",
           "One shared AGENTS.md driving Claude Code and Copilot CLI",
           "Automated AI code-review loop until it converges"
         ]
