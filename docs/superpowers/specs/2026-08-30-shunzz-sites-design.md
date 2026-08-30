@@ -118,5 +118,6 @@ profile/
 - 測試同 brand:dist 存在、lang、單一 h1、SEO 標籤、schema 雙語一致、print 樣式存在。
 - brand 站 nav 的「專業履歷版」連結與 profile 站 footer 的「回 shunzz.com」互連。
 
-### 10.5 部署
-- Cloudflare Pages 專案 `shunzz-profile`:root `/`、build `npm run build -w apps/profile`、output `apps/profile/dist`、`NODE_VERSION=24`、`FORBIDDEN_TERMS`;綁 profile.shunzz.com。
+### 10.5 部署(2026-08-30 定案:Workers Static Assets)
+- 依 Cloudflare 官方建議,新專案改用 Workers Static Assets 而非 Pages:各 app 一份 `wrangler.jsonc`(`assets.directory: ./dist`、`routes[].custom_domain: true`),`npx wrangler deploy` 部署即綁網域;`_headers` 原生支援。
+- shunzz.com / www.shunzz.com 原綁在酸脆 Worker,已改綁 brand;酸脆保留 suancui.shunzz.com。www → apex 轉址以 dashboard Redirect Rule 處理(`_redirects` 不接受絕對網址)。
