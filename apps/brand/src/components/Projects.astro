@@ -1,0 +1,75 @@
+---
+import type { Site } from '../content/schema';
+interface Props { projects: Site['projects'] }
+const { projects } = Astro.props;
+---
+<section id="projects" class="section container">
+  <p class="eyebrow">03</p>
+  <h2>{projects.heading}</h2>
+  <div class="grid">
+    {projects.items.map((p) => (
+      <article class:list={['card', { featured: p.featured }]} data-card>
+        <div class="inner">
+          <div class="face front">
+            <h3>{p.name}</h3>
+            <p>{p.tagline}</p>
+            <ul class="tags">{p.tags.map((t) => <li class="tag">{t}</li>)}</ul>
+            <button type="button" class="flip" data-flip aria-label={`${projects.flipHint} — ${p.name}`} aria-expanded="false">{projects.flipHint} <span aria-hidden="true">↻</span></button>
+          </div>
+          <div class="face back" inert>
+            <ul class="stats">{p.stats.map((s) => <li><strong>{s.value}</strong><span>{s.label}</span></li>)}</ul>
+            <p class="story">{p.story}</p>
+            {p.links.length > 0 && (
+              <p class="links">{p.links.map((l) => <a href={l.href} rel="noopener">{l.label} <span aria-hidden="true">↗</span></a>)}</p>
+            )}
+            <button type="button" class="flip" data-flip aria-label={`${projects.flipBack} — ${p.name}`}><span aria-hidden="true">↺</span></button>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+<style>
+  .grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+  .card { perspective: 1200px; }
+  .card.featured { grid-column: 1 / -1; }
+  .inner { position: relative; inline-size: 100%; display: grid; transition: transform .6s var(--ease); transform-style: preserve-3d; }
+  .card:hover .inner, .card.is-flipped .inner { transform: rotateY(180deg); }
+  .face {
+    grid-area: 1 / 1; padding: var(--space-4); border: 1px solid var(--line); border-radius: var(--radius);
+    background: var(--bg-elev); backface-visibility: hidden; display: flex; flex-direction: column; gap: var(--space-2);
+  }
+  .back { transform: rotateY(180deg); box-shadow: var(--shadow); }
+  .tags { list-style: none; padding: 0; margin: auto 0 0; display: flex; flex-wrap: wrap; gap: .4em; }
+  .stats { list-style: none; padding: 0; margin: 0; display: flex; gap: var(--space-4); flex-wrap: wrap; }
+  .stats strong { display: block; font-family: var(--font-mono); font-size: 1.6rem; color: var(--accent); }
+  .stats span { font-size: .8rem; color: var(--fg-muted); }
+  .story { font-size: .95rem; color: var(--fg-muted); }
+  .links { display: flex; gap: var(--space-3); margin-top: auto; }
+  .flip { align-self: flex-end; background: none; border: 0; color: var(--fg-muted); cursor: pointer; font-family: var(--font-mono); font-size: .8rem; }
+</style>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-card]').forEach((card) => {
+    const front = card.querySelector<HTMLElement>('.front')!;
+    const back = card.querySelector<HTMLElement>('.back')!;
+    const btn = card.querySelector<HTMLButtonElement>('.front [data-flip]')!;
+    let hovering = false;
+
+    const sync = () => {
+      const showBack = hovering || card.classList.contains('is-flipped');
+      front.inert = showBack;
+      back.inert = !showBack;
+      btn.setAttribute('aria-expanded', String(showBack));
+    };
+
+    card.querySelectorAll('[data-flip]').forEach((b) =>
+      b.addEventListener('click', () => {
+        card.classList.toggle('is-flipped');
+        sync();
+        (card.classList.contains('is-flipped') ? back : front).querySelector<HTMLElement>('[data-flip]')?.focus();
+      }));
+
+    card.addEventListener('mouseenter', () => { hovering = true; sync(); });
+    card.addEventListener('mouseleave', () => { hovering = false; sync(); });
+  });
+</script>

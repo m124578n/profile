@@ -1,0 +1,13 @@
+{
+  "name": "shunzz-sites",
+  "private": true,
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "dev": "npm run dev -w apps/brand",
+    "build": "npm run build -w apps/brand",
+    "test": "npm run test -w apps/brand",
+    "check": "npm run check -w apps/brand"
+  }
+}

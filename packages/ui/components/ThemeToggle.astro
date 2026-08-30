@@ -1,0 +1,26 @@
+---
+interface Props { label: string }
+const { label } = Astro.props;
+---
+<button class="theme-toggle" type="button" aria-label={label} title={label} data-theme-toggle>
+  <span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">☾</span>
+</button>
+<style>
+  .theme-toggle {
+    inline-size: 2.4rem; block-size: 2.4rem; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--bg-elev); cursor: pointer; position: relative; overflow: hidden; color: var(--fg);
+  }
+  .theme-toggle span { position: absolute; inset: 0; display: grid; place-items: center; transition: transform .4s var(--ease), opacity .3s; }
+  .moon { transform: translateY(120%) rotate(-40deg); opacity: 0; }
+  :global(html[data-theme="dark"]) .sun { transform: translateY(-120%) rotate(40deg); opacity: 0; }
+  :global(html[data-theme="dark"]) .moon { transform: none; opacity: 1; }
+</style>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch {}
+    });
+  });
+</script>

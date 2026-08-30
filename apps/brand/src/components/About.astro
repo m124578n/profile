@@ -1,0 +1,21 @@
+---
+import type { Site } from '../content/schema';
+interface Props { about: Site['about'] }
+const { about } = Astro.props;
+---
+<section id="about" class="section container">
+  <p class="eyebrow">01</p>
+  <h2>{about.heading}</h2>
+  <p class="lead">{about.short}</p>
+  <details>
+    <summary>{about.readMore}</summary>
+    <div class="acts">
+      {about.acts.map((a) => (<article><h3>{a.title}</h3><p>{a.body}</p></article>))}
+    </div>
+  </details>
+</section>
+<style>
+  .lead { font-size: 1.15rem; }
+  summary { cursor: pointer; color: var(--accent); font-weight: 600; margin-block: var(--space-3); }
+  .acts { display: grid; gap: var(--space-4); margin-top: var(--space-3); }
+</style>

@@ -1,0 +1,24 @@
+# 私密素材(含公司名/內部代號),不進公開 repo
+profile素材_shunzz.md
+履歷更新_2026-08.md
+private/
+
+# Node / Astro
+node_modules/
+dist/
+.astro/
+*.log
+npm-debug.log*
+
+# Cloudflare
+.wrangler/
+.dev.vars
+
+# 環境與編輯器
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

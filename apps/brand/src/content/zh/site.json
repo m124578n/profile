@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "title": "shunzz — Build with AI. Ship for real.",
+    "description": "文組轉工程的 Senior Systems Analyst。用「規格驅動 + AI Agent」工作流獨立交付企業級系統、ML 模型與雲端基礎設施;寫 Claude Skills、建 MCP Gateway。",
+    "name": "shunzz",
+    "jobTitle": "Senior Systems Analyst · AI-Native Software Engineer"
+  },
+  "nav": {
+    "projects": "專案",
+    "about": "關於我",
+    "contact": "聯絡",
+    "profileSite": "專業履歷版",
+    "switchLang": "English",
+    "toggleTheme": "切換深淺色",
+    "primaryNav": "主選單",
+    "skipToContent": "跳到主要內容"
+  },
+  "hero": {
+    "headline": "Build with AI. Ship for real.",
+    "sub": "規格驅動 × AI Agent × 全端交付。我不只用 AI 寫 code——我管理 AI 的工作流程,也為 AI 造工具。",
+    "primaryCta": { "label": "看精選專案", "href": "#projects" },
+    "secondaryCta": { "label": "GitHub", "href": "https://github.com/m124578n" }
+  },
+  "about": {
+    "heading": "關於我",
+    "short": "文組轉工程、JLPT N1 的 Senior Systems Analyst。用「規格驅動 + AI Agent」的工作流獨立交付企業級系統、ML 模型與雲端基礎設施;寫 Claude Skills、建 MCP Gateway、對內推廣 AI 開發方法論。相信 AI 時代的工程師價值在於判斷與流程設計,而不是打字速度。",
+    "acts": [
+      {
+        "title": "第一幕:非典型起點",
+        "body": "文藻日文系畢業、JLPT N1。職涯從語言開始,經資策會半年 AI/雲端養成班轉入工程,先在新創做 AI 應用(內容轉影片平台、LINE avatar 與語音克隆),現於零售集團 IT 子公司擔任 Senior Systems Analyst,橫跨 Data Engineering、DevOps、Cloud Architecture。"
+      },
+      {
+        "title": "第二幕:AI 改變了我做事的方式",
+        "body": "過去一年,我把開發流程重構成「規格驅動 + AI Agent 執行」:需求 → brainstorm → design spec → implementation plan → TDD 實作。AI 負責執行、我負責審查與決策。用這套流程,我獨立交付了企業級配貨平台(2.5 個月)、CDP 的 AI 服務、demand-forecasting ML 模型,也在 3 天內做出公司的 MCP Gateway、1 天做出有 62 個測試的完整應用。每個數字都在 git 歷史裡。"
+      },
+      {
+        "title": "第三幕:從使用者變成建設者",
+        "body": "我不只使用 AI 工具——我把團隊 domain 知識封裝成含 evals 的 Claude Skills、建了讓全公司 AI 工具安全存取內部 API 的 gateway、做內部技術分享推廣這套工作流。下一步:做出能真正影響世界的產品。"
+      }
+    ],
+    "readMore": "讀完整的故事"
+  },
+  "pillars": {
+    "heading": "我怎麼工作",
+    "items": [
+      {
+        "title": "用 AI 交付產品",
+        "points": [
+          "企業級零售配貨平台,2.5 個月獨立交付",
+          "AI 求職助手 Career Agent,3 天上線、有真實使用者",
+          "Flask 每日工作紀錄系統,1 天、62 個測試"
+        ]
+      },
+      {
+        "title": "管理 AI 的方法論",
+        "points": [
+          "規格驅動:brainstorm → spec → plan → TDD",
+          "共用 AGENTS.md 同時駕馭 Claude Code 與 Copilot CLI",
+          "自動化 AI code review 迴圈,直到收斂"
+        ]
+      },
+      {
+        "title": "為 AI 造工具",
+        "points": [
+          "自建 MCP Gateway:內部 API 統一封裝為 MCP tools",
+          "把 domain 知識寫成含 evals 的 Claude Skills",
+          "對內技術分享,推廣 prototype 驅動的需求對齊"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "heading": "精選專案",
+    "flipHint": "翻面看數字",
+    "flipBack": "翻回正面",
+    "items": [
+      {
+        "name": "Career Agent",
+        "tagline": "AI 求職助手:上傳履歷 → AI 診斷 → 自動爬職缺 → 契合度排序 → 客製求職信",
+        "story": "做它是為了讓別人能用工具解決自己的問題。上線後 Threads 介紹貼文瀏覽破萬,有真實使用者。",
+        "tags": ["FastAPI", "MongoDB", "Playwright", "Claude API", "React", "TypeScript"],
+        "stats": [
+          { "value": "3 天", "label": "上線" },
+          { "value": "73", "label": "commits" },
+          { "value": "10K+", "label": "貼文瀏覽" }
+        ],
+        "links": [
+          { "label": "Live", "href": "https://career-agent-at2.pages.dev" },
+          { "label": "GitHub", "href": "https://github.com/m124578n/career_agent" }
+        ],
+        "featured": true
+      },
+      {
+        "name": "酸脆",
+        "tagline": "Threads AI 吐槽產生器:輸入帳號 → 四風格吐槽圖卡 → 分享解鎖隱藏風格",
+        "story": "產品思維與失敗學習:發現 Threads 反爬會回 200 但內容閹割、導致 AI 捏造人格,於是把「不捏造」寫進產品鐵律。上線後觸及不如 Career Agent——工具解決真問題,比娛樂產品更會傳播。",
+        "tags": ["Cloudflare Workers", "Hono", "KV", "React", "npm workspaces"],
+        "stats": [
+          { "value": "1 天", "label": "上線" },
+          { "value": "67", "label": "commits" },
+          { "value": "4", "label": "packages 各有測試" }
+        ],
+        "links": [],
+        "featured": false
+      },
+      {
+        "name": "MCP Gateway",
+        "tagline": "把企業內部 API 統一封裝成 MCP tools,讓各家 AI coding agent 經單一入口安全存取",
+        "story": "設計重點:per-client 授權、SSRF 防護、上游憑證加密、稽核記錄含敏感參數遮罩。工具目錄存 DB,審核後即時上線、免改碼免重啟。",
+        "tags": ["Python", "MCP SDK", "Starlette", "SQLAlchemy", "pytest"],
+        "stats": [
+          { "value": "3 天", "label": "v1 上線" },
+          { "value": "20+", "label": "測試檔" }
+        ],
+        "links": [],
+        "featured": false
+      },
+      {
+        "name": "企業級交付",
+        "tagline": "零售配貨平台、CDP AI 服務、需求預測 ML 模型、Azure IaC",
+        "story": "在零售集團 IT 子公司以 AI 協作獨立交付:2.5 個月的配貨平台(FastAPI + React 19)、Google ADK pipeline 的 CDP AI 服務、LightGBM/CatBoost 配量模型、Bicep 模組化基礎設施。",
+        "tags": ["FastAPI", "React 19", ".NET 8", "Google ADK", "Azure", "Bicep", "LightGBM"],
+        "stats": [
+          { "value": "2.5 月", "label": "配貨平台" },
+          { "value": "1,100+", "label": "檔案" },
+          { "value": "6", "label": "CDP repos" }
+        ],
+        "links": [],
+        "featured": false
+      }
+    ]
+  },
+  "proof": {
+    "heading": "足跡",
+    "items": [
+      { "label": "GitHub", "value": "m124578n", "href": "https://github.com/m124578n" },
+      { "label": "Blog", "value": "56+ 篇,含 30 天寫作挑戰", "href": "https://m124578n.github.io" },
+      { "label": "Dev.to", "value": "週更 Azure 系列", "href": "https://dev.to/m124578n" },
+      { "label": "Threads", "value": "@m23568n", "href": "https://www.threads.net/@m23568n" },
+      { "label": "語言", "value": "中文 · 英文 · 日文(JLPT N1)" }
+    ]
+  },
+  "footer": {
+    "contact": "聯絡我",
+    "email": "m23568n@gmail.com",
+    "note": "這個網站用 Astro 做,部署在 Cloudflare Pages——當然,也是跟 AI 一起做的。"
+  }
+}

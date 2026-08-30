@@ -1,0 +1,23 @@
+---
+import type { Site } from '../content/schema';
+interface Props { proof: Site['proof'] }
+const { proof } = Astro.props;
+---
+<section id="proof" class="section container">
+  <p class="eyebrow">04</p>
+  <h2>{proof.heading}</h2>
+  <dl class="list">
+    {proof.items.map((it) => (
+      <div class="row">
+        <dt>{it.label}</dt>
+        <dd>{it.href ? <a href={it.href} rel="me noopener">{it.value} <span aria-hidden="true">↗</span></a> : it.value}</dd>
+      </div>
+    ))}
+  </dl>
+</section>
+<style>
+  .list { margin: 0; display: grid; gap: var(--space-2); }
+  .row { display: grid; grid-template-columns: 8rem 1fr; gap: var(--space-3); padding-block: var(--space-2); border-bottom: 1px dashed var(--line); }
+  dt { font-family: var(--font-mono); color: var(--fg-muted); font-size: .85rem; }
+  dd { margin: 0; }
+</style>

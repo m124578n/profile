@@ -1,0 +1,25 @@
+{
+  "name": "@shunzz/brand",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/check-content.mjs",
+    "check": "astro check",
+    "check:content": "node scripts/check-content.mjs",
+    "og": "node scripts/gen-og.mjs",
+    "preview": "astro preview",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@shunzz/ui": "*",
+    "astro": "^7.2.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "sharp": "^0.35.4",
+    "typescript": "^6.0.3"
+  }
+}

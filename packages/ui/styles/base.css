@@ -1,0 +1,38 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { color-scheme: light; scroll-behavior: smooth; }
+html[data-theme="dark"] { color-scheme: dark; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--font-sans); font-size: 1.0625rem; line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: .2em; }
+a:hover { color: var(--accent); }
+h1, h2, h3 { line-height: 1.2; letter-spacing: -.01em; margin: 0 0 var(--space-3); }
+h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+p { margin: 0 0 var(--space-3); max-width: var(--measure); }
+.container { width: min(100% - 2 * var(--space-4), 68rem); margin-inline: auto; }
+.section { padding-block: var(--space-6); border-top: 1px solid var(--line); }
+.eyebrow { font-family: var(--font-mono); font-size: .8rem; color: var(--fg-muted); letter-spacing: .08em; text-transform: uppercase; }
+.btn {
+  display: inline-flex; align-items: center; gap: .5em; padding: .7em 1.2em; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--bg-elev); text-decoration: none; font-weight: 600;
+  transition: transform .2s var(--ease), background .2s var(--ease);
+}
+.btn:hover { transform: translateY(-1px); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.tag { font-family: var(--font-mono); font-size: .75rem; padding: .2em .6em; border: 1px solid var(--line); border-radius: 6px; color: var(--fg-muted); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.skip-link {
+  position: absolute; left: -999px; top: 0; background: var(--accent); color: var(--accent-ink);
+  padding: .5em 1em; z-index: 100;
+}
+.skip-link:focus { left: var(--space-3); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

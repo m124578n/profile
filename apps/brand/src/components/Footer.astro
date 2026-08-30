@@ -1,0 +1,17 @@
+---
+import type { Site } from '../content/schema';
+import type { Locale } from '@shunzz/ui/i18n';
+interface Props { footer: Site['footer']; locale: Locale }
+const { footer, locale } = Astro.props;
+const year = new Date().getFullYear();
+---
+<footer id="contact" class="section container">
+  <h2>{footer.contact}</h2>
+  <p><a class="btn primary" href={`mailto:${footer.email}`}>{footer.email}</a></p>
+  <p class="note">{footer.note}</p>
+  <p class="copy">© {year} shunzz · <a href="https://profile.shunzz.com">profile.shunzz.com</a> · <a href={locale === 'en' ? '/' : '/en/'}>{locale === 'en' ? '中文' : 'English'}</a></p>
+</footer>
+<style>
+  .note { color: var(--fg-muted); font-size: .95rem; }
+  .copy { font-family: var(--font-mono); font-size: .8rem; color: var(--fg-muted); }
+</style>

@@ -1,0 +1,43 @@
+---
+import type { Site } from '../content/schema';
+interface Props { hero: Site['hero'] }
+const { hero } = Astro.props;
+---
+<section class="hero container">
+  <p class="eyebrow">shunzz.com</p>
+  <h1 data-typewriter>{hero.headline}</h1>
+  <p class="sub">{hero.sub}</p>
+  <div class="ctas">
+    <a class="btn primary" href={hero.primaryCta.href}>{hero.primaryCta.label}</a>
+    <a class="btn" href={hero.secondaryCta.href} rel="me noopener">{hero.secondaryCta.label}</a>
+  </div>
+</section>
+<style>
+  .hero { padding-block: var(--space-7) var(--space-6); }
+  h1 { font-family: var(--font-mono); min-height: 1.2em; }
+  h1::after { content: "_"; color: var(--accent); animation: blink 1s steps(1) infinite; }
+  .sub { font-size: 1.2rem; color: var(--fg-muted); }
+  .ctas { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4); }
+  @keyframes blink { 50% { opacity: 0; } }
+</style>
+<script>
+  const h = document.querySelector<HTMLElement>('[data-typewriter]');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (h && !reduce) {
+    const full = h.textContent ?? '';
+    h.setAttribute('aria-label', full);
+    h.textContent = '';
+    // Keep every character in the DOM (hidden via visibility) so the
+    // heading's box size never changes during typing — avoids layout shift.
+    const spans = [...full].map((ch) => {
+      const span = document.createElement('span');
+      span.textContent = ch;
+      span.style.visibility = 'hidden';
+      h.appendChild(span);
+      return span;
+    });
+    let i = 0;
+    const tick = () => { spans[i].style.visibility = 'visible'; i++; if (i < spans.length) setTimeout(tick, 45); };
+    setTimeout(tick, 300);
+  }
+</script>

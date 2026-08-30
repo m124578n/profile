@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "title": "shunzz — Build with AI. Ship for real.",
+    "description": "Senior Systems Analyst who ships with AI agents: spec-driven development, enterprise systems, ML models, cloud IaC, Claude Skills and an MCP Gateway.",
+    "name": "shunzz",
+    "jobTitle": "Senior Systems Analyst · AI-Native Software Engineer"
+  },
+  "nav": {
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "profileSite": "Résumé site",
+    "switchLang": "中文",
+    "toggleTheme": "Toggle theme",
+    "primaryNav": "Primary",
+    "skipToContent": "Skip to content"
+  },
+  "hero": {
+    "headline": "Build with AI. Ship for real.",
+    "sub": "Spec-driven × AI agents × full-stack delivery. I don't just use AI to write code — I manage how AI works, and I build tools for it.",
+    "primaryCta": { "label": "See featured projects", "href": "#projects" },
+    "secondaryCta": { "label": "GitHub", "href": "https://github.com/m124578n" }
+  },
+  "about": {
+    "heading": "About",
+    "short": "Japanese Literature major turned Senior Systems Analyst (JLPT N1). I ship enterprise systems, ML models and cloud infrastructure with a spec-driven, AI-agent workflow; I write Claude Skills, built an MCP Gateway, and teach the workflow internally. In the AI era an engineer's value is judgment and process design, not typing speed.",
+    "acts": [
+      {
+        "title": "Act 1: An unusual start",
+        "body": "Japanese Literature degree, JLPT N1. My career began with language; a six-month AI/cloud bootcamp moved me into engineering. I built AI applications at a startup (content-to-video, LINE avatars and voice cloning) and now work as a Senior Systems Analyst at a retail group's IT subsidiary, spanning data engineering, DevOps and cloud architecture."
+      },
+      {
+        "title": "Act 2: AI changed how I work",
+        "body": "Over the past year I rebuilt my workflow around spec-driven development with AI agents: requirements → brainstorm → design spec → implementation plan → TDD. AI executes; I review and decide. With it I independently delivered an enterprise allocation platform (2.5 months), the AI service of a Customer Data Platform, demand-forecasting ML models, a company MCP Gateway in 3 days, and a full app with 62 tests in one day. Every number is in the git history."
+      },
+      {
+        "title": "Act 3: From user to builder",
+        "body": "I don't just use AI tools — I package team domain knowledge as Claude Skills with evals, built the gateway that lets every AI tool in the company reach internal APIs safely, and teach the workflow in internal talks. Next: build something that actually matters."
+      }
+    ],
+    "readMore": "Read the full story"
+  },
+  "pillars": {
+    "heading": "How I work",
+    "items": [
+      {
+        "title": "Ship products with AI",
+        "points": [
+          "Enterprise retail allocation platform, delivered solo in 2.5 months",
+          "Career Agent, an AI job-search assistant, live in 3 days with real users",
+          "A Flask daily-log system in one day, 62 tests"
+        ]
+      },
+      {
+        "title": "Manage how AI works",
+        "points": [
+          "Spec-driven: brainstorm → spec → plan → TDD",
+          "One shared AGENTS.md driving Claude Code and Copilot CLI",
+          "Automated AI code-review loop until it converges"
+        ]
+      },
+      {
+        "title": "Build tools for AI",
+        "points": [
+          "Self-built MCP Gateway wrapping internal APIs as MCP tools",
+          "Domain knowledge packaged as Claude Skills with evals",
+          "Internal talks on prototype-driven requirement alignment"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Featured projects",
+    "flipHint": "Flip for numbers",
+    "flipBack": "Flip back",
+    "items": [
+      {
+        "name": "Career Agent",
+        "tagline": "AI job-search assistant: upload résumé → AI diagnosis → auto-crawl listings → fit ranking → tailored cover letters",
+        "story": "Built so others could solve their own problem with a tool. The launch post on Threads passed 10K views and it has real users.",
+        "tags": ["FastAPI", "MongoDB", "Playwright", "Claude API", "React", "TypeScript"],
+        "stats": [
+          { "value": "3 days", "label": "to launch" },
+          { "value": "73", "label": "commits" },
+          { "value": "10K+", "label": "post views" }
+        ],
+        "links": [
+          { "label": "Live", "href": "https://career-agent-at2.pages.dev" },
+          { "label": "GitHub", "href": "https://github.com/m124578n/career_agent" }
+        ],
+        "featured": true
+      },
+      {
+        "name": "Suancui (酸脆)",
+        "tagline": "Threads AI roast generator: enter a handle → four roast styles as share cards → share to unlock hidden styles",
+        "story": "Product thinking and a lesson in failure: Threads' anti-scraping returned 200 with gutted content, so the AI fabricated personalities. \"Never fabricate\" became a product rule. It spread less than Career Agent — tools that solve real problems travel further than entertainment.",
+        "tags": ["Cloudflare Workers", "Hono", "KV", "React", "npm workspaces"],
+        "stats": [
+          { "value": "1 day", "label": "to launch" },
+          { "value": "67", "label": "commits" },
+          { "value": "4", "label": "packages, each tested" }
+        ],
+        "links": [],
+        "featured": false
+      },
+      {
+        "name": "MCP Gateway",
+        "tagline": "Wraps internal enterprise APIs as MCP tools so any AI coding agent reaches them safely through one entry point",
+        "story": "Design focus: per-client auth, SSRF protection, encrypted upstream credentials, audit logs with sensitive-parameter masking. Tool catalog lives in a DB — approved tools go live without code changes or restarts.",
+        "tags": ["Python", "MCP SDK", "Starlette", "SQLAlchemy", "pytest"],
+        "stats": [
+          { "value": "3 days", "label": "to v1" },
+          { "value": "20+", "label": "test files" }
+        ],
+        "links": [],
+        "featured": false
+      },
+      {
+        "name": "Enterprise delivery",
+        "tagline": "Retail allocation platform, CDP AI service, demand-forecasting ML, Azure IaC",
+        "story": "Delivered solo with AI collaboration at a retail group's IT subsidiary: a 2.5-month allocation platform (FastAPI + React 19), a CDP AI service on a Google ADK pipeline, LightGBM/CatBoost allocation models, and modular Bicep infrastructure.",
+        "tags": ["FastAPI", "React 19", ".NET 8", "Google ADK", "Azure", "Bicep", "LightGBM"],
+        "stats": [
+          { "value": "2.5 mo", "label": "allocation platform" },
+          { "value": "1,100+", "label": "files" },
+          { "value": "6", "label": "CDP repos" }
+        ],
+        "links": [],
+        "featured": false
+      }
+    ]
+  },
+  "proof": {
+    "heading": "Footprints",
+    "items": [
+      { "label": "GitHub", "value": "m124578n", "href": "https://github.com/m124578n" },
+      { "label": "Blog", "value": "56+ posts incl. a 30-day writing challenge", "href": "https://m124578n.github.io" },
+      { "label": "Dev.to", "value": "Weekly Azure series", "href": "https://dev.to/m124578n" },
+      { "label": "Threads", "value": "@m23568n", "href": "https://www.threads.net/@m23568n" },
+      { "label": "Languages", "value": "Chinese · English · Japanese (JLPT N1)" }
+    ]
+  },
+  "footer": {
+    "contact": "Get in touch",
+    "email": "m23568n@gmail.com",
+    "note": "Built with Astro, deployed on Cloudflare Pages — and yes, built together with AI."
+  }
+}

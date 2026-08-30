@@ -1,0 +1,9 @@
+---
+import type { Locale } from '../i18n';
+import { localePath } from '../i18n';
+interface Props { locale: Locale; label: string }
+const { locale, label } = Astro.props;
+const other: Locale = locale === 'en' ? 'zh-hant' : 'en';
+---
+<a class="lang" href={localePath(other)} hreflang={other === 'en' ? 'en' : 'zh-Hant'}>{label}</a>
+<style>.lang { font-family: var(--font-mono); font-size: .85rem; text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: .4em .9em; }</style>

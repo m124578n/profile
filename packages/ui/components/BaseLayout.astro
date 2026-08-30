@@ -1,0 +1,55 @@
+---
+import '../styles/tokens.css';
+import '../styles/base.css';
+import type { Locale } from '../i18n';
+import { htmlLang } from '../i18n';
+import Seo from './Seo.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import LangSwitch from './LangSwitch.astro';
+
+interface Props {
+  locale: Locale; title: string; description: string; name: string; jobTitle: string;
+  nav: {
+    projects: string; about: string; contact: string; profileSite: string; switchLang: string; toggleTheme: string;
+    primaryNav: string; skipToContent: string;
+  };
+}
+const { locale, title, description, name, jobTitle, nav } = Astro.props;
+---
+<html lang={htmlLang(locale)}>
+  <head>
+    <script is:inline>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.dataset.theme = t;
+        } catch (e) { document.documentElement.dataset.theme = 'light'; }
+      })();
+    </script>
+    <Seo {locale} {title} {description} {name} {jobTitle} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{nav.skipToContent}</a>
+    <header class="site-header container">
+      <a class="brand" href={locale === 'en' ? '/en/' : '/'}>{name}</a>
+      <nav aria-label={nav.primaryNav}>
+        <a href="#projects">{nav.projects}</a>
+        <a href="#about">{nav.about}</a>
+        <a href="#contact">{nav.contact}</a>
+        <a href="https://profile.shunzz.com" rel="me">{nav.profileSite}</a>
+        <LangSwitch {locale} label={nav.switchLang} />
+        <ThemeToggle label={nav.toggleTheme} />
+      </nav>
+    </header>
+    <main id="main"><slot /></main>
+    <slot name="footer" />
+  </body>
+</html>
+<style>
+  .site-header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding-block: var(--space-4); flex-wrap: wrap; }
+  .brand { font-family: var(--font-mono); font-weight: 600; text-decoration: none; }
+  nav { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+  nav a { text-decoration: none; color: var(--fg-muted); }
+  nav a:hover { color: var(--accent); }
+</style>

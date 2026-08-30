@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@shunzz/ui/components/BaseLayout.astro';
+import { loadSite } from '../../content/load';
+import Hero from '../../components/Hero.astro';
+import About from '../../components/About.astro';
+import Pillars from '../../components/Pillars.astro';
+import Projects from '../../components/Projects.astro';
+import Proof from '../../components/Proof.astro';
+import Footer from '../../components/Footer.astro';
+const locale = 'en' as const;
+const site = loadSite(locale);
+---
+<BaseLayout {locale} title={site.meta.title} description={site.meta.description} name={site.meta.name} jobTitle={site.meta.jobTitle} nav={site.nav}>
+  <Hero hero={site.hero} />
+  <About about={site.about} />
+  <Pillars pillars={site.pillars} />
+  <Projects projects={site.projects} />
+  <Proof proof={site.proof} />
+  <Footer slot="footer" footer={site.footer} {locale} />
+</BaseLayout>

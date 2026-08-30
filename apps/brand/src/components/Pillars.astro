@@ -1,0 +1,25 @@
+---
+import type { Site } from '../content/schema';
+interface Props { pillars: Site['pillars'] }
+const { pillars } = Astro.props;
+---
+<section id="how" class="section container">
+  <p class="eyebrow">02</p>
+  <h2>{pillars.heading}</h2>
+  <div class="grid">
+    {pillars.items.map((it, i) => (
+      <article class="pillar">
+        <span class="num">{String(i + 1).padStart(2, '0')}</span>
+        <h3>{it.title}</h3>
+        <ul>{it.points.map((p) => <li>{p}</li>)}</ul>
+      </article>
+    ))}
+  </div>
+</section>
+<style>
+  .grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .pillar { padding: var(--space-4); border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-elev); }
+  .num { font-family: var(--font-mono); color: var(--accent); }
+  ul { padding-left: 1.2em; margin: 0; color: var(--fg-muted); }
+  li + li { margin-top: .4em; }
+</style>
