@@ -39,7 +39,7 @@
       { "label": "LinkedIn", "href": "https://www.linkedin.com/in/john19980215/", "rel": "me" },
       { "label": "Threads @m23568n", "href": "https://www.threads.net/@m23568n", "rel": "me" }
     ],
-    "summary": "Four years of Python backend and AI application engineering. I specialize in spec-driven development with AI agents (Claude Code, GitHub Copilot CLI; the open-source superpowers workflow, tuned per project), independently delivering enterprise systems, ML models, cloud IaC and consumer products — then institutionalizing the workflow through internal talks, reusable Claude Skills with evals, and a self-built MCP Gateway serving as company-wide AI infrastructure. Previously led two AI video-generation products from zero to 7,000+ users, halving monthly infrastructure cost ($40K → $20K) and cutting failure rate from 30% to under 1%. JLPT N1."
+    "summary": "Four years of Python backend and AI application engineering. I specialize in spec-driven development with AI agents (Claude Code, GitHub Copilot CLI; the open-source superpowers workflow, tuned per project), independently delivering enterprise systems, ML models, cloud IaC and consumer products — then institutionalizing the workflow through internal talks, reusable Claude Skills with evals, and a self-built MCP Gateway serving as company-wide AI infrastructure. Previously led two AI video-generation products from zero to 7,000+ users, halving monthly infrastructure cost (NT$40K → NT$20K) and cutting failure rate from 30% to under 1%. JLPT N1."
   },
   "positioning": [
     { "title": "Ship products with AI", "body": "Enterprise projects and side projects, with speed and quality in the git history: an allocation platform in 2.5 months, an MCP Gateway live in 3 days, a 62-test app in one day." },
@@ -127,7 +127,7 @@
       "bullets": [
         "Led OVideo, an AI-driven content-to-video platform serving 1,800+ users, incl. membership, subscriptions, payment integration and Azure deployment",
         "Designed the full video-generation pipeline: LLMs (GPT-4, Claude, Gemini) for content analysis, scripting and image-text matching; FFmpeg for processing, subtitles and encoding; async tasks with Server-Sent Events progress",
-        "Performance and cost: parallelized the pipeline to cut average generation time from 30 to 15 minutes (-50%); re-architected Azure services to halve monthly infrastructure cost ($40,000 → $20,000); serverless architecture scaled capacity from 10 to 100+ concurrent users; 1,100+ videos processed",
+        "Performance and cost: parallelized the pipeline to cut average generation time from 30 to 15 minutes (-50%); re-architected Azure services to halve monthly infrastructure cost (NT$40,000 → NT$20,000); serverless architecture scaled capacity from 10 to 100+ concurrent users; 1,100+ videos processed",
         "Introduced Clean Architecture, cutting new-feature development time by 50%; designed a PostgreSQL / MongoDB hybrid for high concurrency",
         "Built Osense AI, a LINE-based AI avatar and voice-cloning system (5,400+ users): lip-sync and voice cloning, full LINE Bot user flows; fixed upstream open-source bugs and error handling to cut failure rate from 30% to under 1%",
         "Rapid PoCs with Gradio and light frontends for client demos; introduced AI tooling to speed up development"

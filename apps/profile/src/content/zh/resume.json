@@ -39,7 +39,7 @@
       { "label": "LinkedIn", "href": "https://www.linkedin.com/in/john19980215/", "rel": "me" },
       { "label": "Threads @m23568n", "href": "https://www.threads.net/@m23568n", "rel": "me" }
     ],
-    "summary": "4 年 Python 後端與 AI 應用開發經驗。以 AI Agent(Claude Code、GitHub Copilot CLI)為核心的規格驅動開發流程(採用開源 superpowers 工作流並依專案調整)，獨立完成企業級系統、ML 模型、雲端 IaC 到個人產品的全端交付;並將此工作流程制度化(內部技術分享、含 evals 的可複用 Claude Skills)、工具化(自建 MCP Gateway 作為公司 AI 基礎設施)。曾從零主導 2 款 AI 影片生成產品，服務 7,000+ 名使用者，將月基礎設施成本由 $40K 降至 $20K、失敗率由 30% 降至 1% 以下。JLPT N1。"
+    "summary": "4 年 Python 後端與 AI 應用開發經驗。以 AI Agent(Claude Code、GitHub Copilot CLI)為核心的規格驅動開發流程(採用開源 superpowers 工作流並依專案調整)，獨立完成企業級系統、ML 模型、雲端 IaC 到個人產品的全端交付;並將此工作流程制度化(內部技術分享、含 evals 的可複用 Claude Skills)、工具化(自建 MCP Gateway 作為公司 AI 基礎設施)。曾從零主導 2 款 AI 影片生成產品，服務 7,000+ 名使用者，將月基礎設施成本由 NT$40K 降至 NT$20K、失敗率由 30% 降至 1% 以下。JLPT N1。"
   },
   "positioning": [
     { "title": "用 AI 交付產品", "body": "企業級專案 + side projects，速度與品質有 git 紀錄佐證:2.5 個月獨立交付配貨平台、3 天上線 MCP Gateway、1 天完成 62 個測試的應用。" },
@@ -127,7 +127,7 @@
       "bullets": [
         "主導開發 OVideo——AI 驅動的內容轉影片平台，服務 1,800+ 名使用者;含會員系統、訂閱機制、金流串接與 Azure 雲端部署",
         "規劃並建構完整影片生成 pipeline:整合 LLM(GPT-4、Claude、Gemini)進行內容分析、腳本生成與圖文配對;FFmpeg 影片處理、字幕疊加與編碼優化;異步任務設計 + Server-Sent Events 即時回報進度",
-        "效能與成本優化:流程拆分並行，平均影片生成時間 30 分鐘 → 15 分鐘(-50%);調整架構與 Azure 服務，月基礎設施成本 $40,000 → $20,000(-50%);Serverless 架構將承載能力由 10 人擴展至 100+ 併發;累計處理 1,100+ 部影片",
+        "效能與成本優化:流程拆分並行，平均影片生成時間 30 分鐘 → 15 分鐘(-50%);調整架構與 Azure 服務，月基礎設施成本 NT$40,000 → NT$20,000(-50%);Serverless 架構將承載能力由 10 人擴展至 100+ 併發;累計處理 1,100+ 部影片",
         "導入 Clean Architecture，新功能開發時間縮短 50%;設計 PostgreSQL / MongoDB 混合資料庫架構支援高併發",
         "開發 Osense AI——基於 LINE 的 AI 分身與聲音克隆系統(5,400+ 名使用者):整合 lip-sync、voice cloning，實作 LINE Bot 完整使用者流程;透過優化開源軟體錯誤與錯誤處理，失敗率 30% → <1%",
         "以 Gradio 與基礎前端框架快速開發 PoC 供客戶展示;導入 AI 工具加速開發"
