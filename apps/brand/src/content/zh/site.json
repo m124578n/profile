@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "shunzz — Build with AI. Ship for real.",
-    "description": "文組轉工程的 Senior Systems Analyst。用「規格驅動 + AI Agent」工作流獨立交付企業級系統、ML 模型與雲端基礎設施;寫 Claude Skills、建 MCP Gateway。",
+    "description": "文組轉軟體工程師的 Senior Systems Analyst。用「規格驅動 + AI Agent」工作流獨立交付企業級系統、ML 模型與雲端基礎設施;寫 Claude Skills、建 MCP Gateway。",
     "name": "shunzz",
     "jobTitle": "Senior Systems Analyst · AI-Native Software Engineer"
   },
@@ -23,7 +23,7 @@
   },
   "about": {
     "heading": "關於我",
-    "short": "文組轉工程、JLPT N1 的 Senior Systems Analyst。用「規格驅動 + AI Agent」的工作流獨立交付企業級系統、ML 模型與雲端基礎設施;寫 Claude Skills、建 MCP Gateway、對內推廣 AI 開發方法論。相信 AI 時代的工程師價值在於判斷與流程設計,而不是打字速度。",
+    "short": "文組轉軟體工程師、JLPT N1 的 Senior Systems Analyst。用「規格驅動 + AI Agent」的工作流獨立交付企業級系統、ML 模型與雲端基礎設施;寫 Claude Skills、建 MCP Gateway、對內推廣 AI 開發方法論。相信 AI 時代的工程師價值在於判斷與流程設計,而不是打字速度。",
     "acts": [
       {
         "title": "第一幕:非典型起點",

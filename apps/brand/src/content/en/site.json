@@ -23,7 +23,7 @@
   },
   "about": {
     "heading": "About",
-    "short": "Japanese Literature major turned Senior Systems Analyst (JLPT N1). I ship enterprise systems, ML models and cloud infrastructure with a spec-driven, AI-agent workflow; I write Claude Skills, built an MCP Gateway, and teach the workflow internally. In the AI era an engineer's value is judgment and process design, not typing speed.",
+    "short": "Japanese Literature major turned software engineer, now a Senior Systems Analyst (JLPT N1). I ship enterprise systems, ML models and cloud infrastructure with a spec-driven, AI-agent workflow; I write Claude Skills, built an MCP Gateway, and teach the workflow internally. In the AI era an engineer's value is judgment and process design, not typing speed.",
     "acts": [
       {
         "title": "Act 1: An unusual start",
