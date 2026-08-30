@@ -39,3 +39,10 @@ test('en 履歷內容', () => {
   assert.match(en, /Jung Shing International/);
   assert.match(en, /Retail allocation platform/);
 });
+test('sitemap/robots/og', () => {
+  assert.ok(existsSync(resolve(root, 'dist/sitemap-index.xml')));
+  assert.match(html('robots.txt'), /Sitemap: https:\/\/profile\.shunzz\.com\/sitemap-index\.xml/);
+  const buf = readFileSync(resolve(root, 'dist/og.png'));
+  assert.equal(buf.readUInt32BE(16), 1200); assert.equal(buf.readUInt32BE(20), 630);
+  assert.match(html('index.html'), /og:image" content="https:\/\/profile\.shunzz\.com\/og\.png"/);
+});

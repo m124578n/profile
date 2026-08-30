@@ -5,7 +5,7 @@ npm workspaces monorepo.
 | app | domain | status |
 |---|---|---|
 | `apps/brand` | shunzz.com | v1 |
-| `apps/profile` | profile.shunzz.com | planned |
+| `apps/profile` | profile.shunzz.com | v1 |
 | `packages/ui` | shared tokens / layout / SEO | — |
 
 ## Dev
@@ -32,3 +32,6 @@ CI / Cloudflare Pages:改用環境變數 `FORBIDDEN_TERMS`(逗號分隔)。
 - Project `shunzz-brand`:Build command `npm run build`,Build output `apps/brand/dist`,Root directory `/`,Node 24(`NODE_VERSION=24`)。
 - Custom domains:`shunzz.com`(+ `www` → 301 到 apex)。
 - OG 圖:`npm run og -w apps/brand` 重新產生 `public/og.png`。
+- Project `shunzz-profile`:Build command `npm run build -w apps/profile`,Build output `apps/profile/dist`,Root directory `/`,`NODE_VERSION=24`,`FORBIDDEN_TERMS`。Custom domain `profile.shunzz.com`。
+- 兩站互連:brand nav「專業履歷版」→ profile;profile nav/footer → shunzz.com。
+- `npm run dev:profile` 本機開發 profile 站。
