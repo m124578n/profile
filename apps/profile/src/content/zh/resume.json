@@ -154,7 +154,7 @@
       "period": "2026/06 – 進行中",
       "desc": "上傳履歷 → AI 診斷 → 爬取職缺 → 語意層契合度排序(分數 + 理由 + 缺少技能)→ 客製求職信 → 應徵追蹤;含雲端多人版與地端個人助理兩套架構。FastAPI + MongoDB + Claude API + Playwright;React + TS + Mantine;3 天 73 commits,Threads 介紹貼文瀏覽破萬、有真實使用者。全程以 Claude Code + superpowers 的 agentic 工作流完成:我負責需求、架構、任務拆解與審查。",
       "links": [
-        { "label": "Live", "href": "https://career-agent-at2.pages.dev" },
+        { "label": "Live", "href": "https://jobtracker.shunzz.com" },
         { "label": "GitHub", "href": "https://github.com/m124578n/career_agent" }
       ]
     },

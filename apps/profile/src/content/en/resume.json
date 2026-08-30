@@ -154,7 +154,7 @@
       "period": "Jun 2026 – ongoing",
       "desc": "Upload résumé → AI diagnosis → crawl listings → semantic fit ranking (score + reasons + missing skills) → tailored cover letters → application tracking; cloud multi-user and local personal-assistant architectures. FastAPI + MongoDB + Claude API + Playwright; React + TS + Mantine; 73 commits in 3 days, 10K+ views on the launch post, real users. Built end-to-end with the Claude Code + superpowers agentic workflow: I owned requirements, architecture, task breakdown and review.",
       "links": [
-        { "label": "Live", "href": "https://career-agent-at2.pages.dev" },
+        { "label": "Live", "href": "https://jobtracker.shunzz.com" },
         { "label": "GitHub", "href": "https://github.com/m124578n/career_agent" }
       ]
     },
