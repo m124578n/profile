@@ -10,10 +10,7 @@ export const siteSchema = z.object({
     jobTitle: z.string(),
   }),
   nav: z.object({
-    projects: z.string(),
-    about: z.string(),
-    contact: z.string(),
-    profileSite: z.string(),
+    links: z.array(z.object({ label: z.string(), href: z.string(), rel: z.string().optional() })).min(1),
     switchLang: z.string(),
     toggleTheme: z.string(),
     primaryNav: z.string(),

@@ -17,7 +17,7 @@ function loadTerms() {
 
   const filePath = process.env.FORBIDDEN_TERMS_FILE
     ? process.env.FORBIDDEN_TERMS_FILE
-    : fileURLToPath(new URL('../../../private/forbidden-terms.txt', import.meta.url));
+    : fileURLToPath(new URL('../private/forbidden-terms.txt', import.meta.url));
 
   if (existsSync(filePath)) {
     const lines = readFileSync(filePath, 'utf8')

@@ -28,7 +28,7 @@ test('每個 project 有 name/tagline/tags/stats', () => {
 });
 
 test('check-content 對乾淨內容 exit 0', () => {
-  const r = spawnSync(process.execPath, ['scripts/check-content.mjs', 'src/content'], {
+  const r = spawnSync(process.execPath, ['../../scripts/check-content.mjs', 'src/content'], {
     cwd: root,
     encoding: 'utf8',
     env: { ...process.env, FORBIDDEN_TERMS: 'zzforbiddenzz' },
@@ -39,7 +39,7 @@ test('check-content 對乾淨內容 exit 0', () => {
 test('check-content 命中禁用詞 exit 1', () => {
   const dir = mkdtempSync(join(tmpdir(), 'cc-'));
   writeFileSync(join(dir, 'x.json'), '{"a":"contains zzforbiddenzz here"}');
-  const r = spawnSync(process.execPath, ['scripts/check-content.mjs', dir], {
+  const r = spawnSync(process.execPath, ['../../scripts/check-content.mjs', dir], {
     cwd: root,
     encoding: 'utf8',
     env: { ...process.env, FORBIDDEN_TERMS: 'zzforbiddenzz' },
@@ -50,7 +50,7 @@ test('check-content 命中禁用詞 exit 1', () => {
 
 test('check-content 無禁用詞來源時 exit 1', () => {
   const dir = mkdtempSync(join(tmpdir(), 'cc-'));
-  const r = spawnSync(process.execPath, ['scripts/check-content.mjs', dir], {
+  const r = spawnSync(process.execPath, ['../../scripts/check-content.mjs', dir], {
     cwd: root,
     encoding: 'utf8',
     env: { ...process.env, FORBIDDEN_TERMS: '', FORBIDDEN_TERMS_FILE: join(dir, 'missing.txt') },

@@ -2,12 +2,21 @@
   "name": "shunzz-sites",
   "private": true,
   "type": "module",
-  "workspaces": ["apps/*", "packages/*"],
-  "engines": { "node": ">=24" },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "npm run dev -w apps/brand",
-    "build": "npm run build -w apps/brand",
-    "test": "npm run test -w apps/brand",
-    "check": "npm run check -w apps/brand"
+    "dev:profile": "npm run dev -w apps/profile",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "check": "npm run check --workspaces --if-present"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4"
   }
 }

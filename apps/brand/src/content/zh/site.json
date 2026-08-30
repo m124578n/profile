@@ -6,10 +6,12 @@
     "jobTitle": "AI-Native Software Engineer · Senior Systems Analyst"
   },
   "nav": {
-    "projects": "專案",
-    "about": "關於我",
-    "contact": "聯絡",
-    "profileSite": "專業履歷版",
+    "links": [
+      { "label": "專案", "href": "#projects" },
+      { "label": "關於我", "href": "#about" },
+      { "label": "聯絡", "href": "#contact" },
+      { "label": "專業履歷版", "href": "https://profile.shunzz.com", "rel": "me" }
+    ],
     "switchLang": "English",
     "toggleTheme": "切換深淺色",
     "primaryNav": "主選單",
