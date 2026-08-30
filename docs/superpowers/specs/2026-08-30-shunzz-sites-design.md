@@ -88,6 +88,35 @@ profile/
 - Cloudflare Pages 專案 `shunzz-brand`(root `/`, build `npm run build -w apps/brand`, output `apps/brand/dist`),綁 shunzz.com + www 轉址。
 - 第二輪 `shunzz-profile` 同法綁 profile.shunzz.com。
 
-## 10. 第二輪:profile 站(僅列範圍)
+## 10. 第二輪:profile 站(profile.shunzz.com)
 
-Hero(姓名/職稱/Summary)→ 工作經歷(零售 IT 子公司 Senior Systems Analyst,去識別化 bullets;OSENSE)→ 技術棧 → Side Projects → 語言/教育 → 聯絡 + PDF 連結位。共用 `packages/ui`,版面更緊湊、可列印(`@media print`)。
+決定(2026-08-30):現職匿名為「零售集團 IT 子公司」、前職 OSENSE Technology 實名;內容量為完整版(不受一頁限制);不放 PDF 下載,以 `@media print` 列印樣式代替。
+
+### 10.1 架構
+- 新增 `apps/profile`,與 `apps/brand` 同構(Astro 7 靜態、i18n `/` zh + `/en/`、內容 JSON + zod、build 時禁用詞掃描)。`site: https://profile.shunzz.com`。
+- `packages/ui` 泛用化:`BaseLayout` 的 `nav` 改為 `{ links: {label, href, rel?}[], switchLang, toggleTheme, primaryNav, skipToContent }`,brand 的 schema/JSON 同步改;`Seo` 不變(canonical/OG 依各 app 的 `Astro.site`)。
+- 共用腳本移到根目錄 `scripts/`:`check-content.mjs`(denylist 讀法不變,路徑改為相對 repo root)、`gen-og.mjs`(改為吃參數:標題兩行、副標、輸出路徑)。
+- 根目錄 scripts:`build`/`test`/`check` 跑兩個 app;CI 同步。
+
+### 10.2 頁面結構(單頁,緊湊、可掃讀)
+1. **Header**:姓名、定位標題(AI-Native Software Engineer · Senior Systems Analyst)、聯絡列(email / GitHub / LinkedIn / Threads)、Summary 一段
+2. **三層定位**:用 AI 交付產品 / 管理 AI 的方法論 / 為 AI 造工具(三短句)
+3. **工作經歷**:零售集團 IT 子公司 — Senior Systems Analyst(專案分組 bullets:配貨平台、ML 模型、CDP、MCP Gateway、Log 分析、企業聊天機器人部署、Azure IaC 與資料工程、AI 方法論);OSENSE Technology — AI Application Engineer
+4. **Side Projects**:Career Agent、酸脆、每日工作紀錄系統、其他
+5. **技術棧**:分組標籤列
+6. **教育與語言**:文藻外語大學日文系;資策會 AI/雲端養成班;中/英/日(JLPT N1)
+7. **Footer**:聯絡、回 shunzz.com、語言切換
+- `period`(任職期間)為選填欄位,首版留空由使用者補。
+
+### 10.3 視覺
+- 與 brand 站共用 tokens/字體/深淺色;版面更緊湊(單欄、`--measure` 放寬、列表密度高),無打字、無翻面。
+- `@media print`:隱藏 header nav / 主題與語言切換 / skip link,白底黑字,連結顯示網址,分頁避免切斷 section,A4 邊界。
+
+### 10.4 SEO / 保密 / 測試
+- 與 §6 相同:canonical、hreflang、OG(`og.png` 由 gen-og 產)、JSON-LD `Person`、sitemap、robots、`_headers`。
+- 禁用詞掃描沿用;現職不可出現公司名與內部系統代號(企業聊天機器人產品以「企業聊天機器人產品」描述)。
+- 測試同 brand:dist 存在、lang、單一 h1、SEO 標籤、schema 雙語一致、print 樣式存在。
+- brand 站 nav 的「專業履歷版」連結與 profile 站 footer 的「回 shunzz.com」互連。
+
+### 10.5 部署
+- Cloudflare Pages 專案 `shunzz-profile`:root `/`、build `npm run build -w apps/profile`、output `apps/profile/dist`、`NODE_VERSION=24`、`FORBIDDEN_TERMS`;綁 profile.shunzz.com。
