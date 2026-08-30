@@ -106,3 +106,11 @@ test('og.png 是 1200x630 PNG', () => {
   assert.equal(buf.readUInt32BE(16), 1200);
   assert.equal(buf.readUInt32BE(20), 630);
 });
+
+test('about 展開動畫:details 帶 data-story 且有對應 inline script', () => {
+  for (const p of ['index.html', 'en/index.html']) {
+    const h = html(p);
+    assert.match(h, /<details[^>]*data-story/, p);
+    assert.match(h, /data-story[\s\S]*prefers-reduced-motion/, p);
+  }
+});

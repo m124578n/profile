@@ -7,7 +7,7 @@ const { about } = Astro.props;
   <p class="eyebrow">01</p>
   <h2>{about.heading}</h2>
   <p class="lead">{about.short}</p>
-  <details>
+  <details data-story>
     <summary>{about.readMore}</summary>
     <div class="acts">
       {about.acts.map((a) => (<article><h3>{a.title}</h3><p>{a.body}</p></article>))}
@@ -16,6 +16,45 @@ const { about } = Astro.props;
 </section>
 <style>
   .lead { font-size: 1.15rem; }
-  summary { cursor: pointer; color: var(--accent); font-weight: 600; margin-block: var(--space-3); }
-  .acts { display: grid; gap: var(--space-4); margin-top: var(--space-3); }
+  summary {
+    cursor: pointer; color: var(--accent); font-weight: 600; margin-block: var(--space-3);
+    list-style: none; display: inline-flex; align-items: center; gap: .5em;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before {
+    content: "▶"; font-size: .7em; display: inline-block;
+    transition: transform .3s var(--ease);
+  }
+  details[open] summary::before { transform: rotate(90deg); }
+  .acts { display: grid; gap: var(--space-4); margin-top: var(--space-3); overflow: hidden; }
+  /* 三幕依序淡入上浮;無 JS 時也生效 */
+  details[open] .acts article { animation: rise .45s var(--ease) both; }
+  details[open] .acts article:nth-child(2) { animation-delay: 80ms; }
+  details[open] .acts article:nth-child(3) { animation-delay: 160ms; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
 </style>
+<script>
+  // 展開/收合時對 .acts 做高度動畫;原生 <details> 收合會瞬間消失,所以先動畫再關閉。
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLDetailsElement>('[data-story]').forEach((d) => {
+    const summary = d.querySelector('summary')!;
+    const acts = d.querySelector<HTMLElement>('.acts')!;
+    let anim: Animation | null = null;
+    summary.addEventListener('click', (e) => {
+      if (reduce) return;                         // 交給原生行為
+      e.preventDefault();
+      anim?.cancel();
+      if (d.open) {
+        anim = acts.animate([{ height: `${acts.offsetHeight}px`, opacity: 1 }, { height: '0px', opacity: 0 }],
+          { duration: 300, easing: 'cubic-bezier(.2,.7,.2,1)' });
+        anim.onfinish = () => { d.open = false; anim = null; };
+      } else {
+        d.open = true;
+        const h = acts.offsetHeight;
+        anim = acts.animate([{ height: '0px', opacity: 0 }, { height: `${h}px`, opacity: 1 }],
+          { duration: 400, easing: 'cubic-bezier(.2,.7,.2,1)' });
+        anim.onfinish = () => { anim = null; };
+      }
+    });
+  });
+</script>
