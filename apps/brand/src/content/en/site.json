@@ -1,16 +1,29 @@
 {
   "meta": {
     "title": "shunzz — Build with AI. Ship for real.",
-    "description": "AI-Native Software Engineer who ships with AI agents: spec-driven development, enterprise systems, ML models, cloud IaC, Claude Skills and an MCP Gateway.",
+    "description": "AI-Native Software Engineer who ships with AI agents: enterprise systems by day, side projects live in days; an MCP Gateway, Claude Skills and Claude Code mods.",
     "name": "shunzz",
     "jobTitle": "AI-Native Software Engineer · Senior Systems Analyst"
   },
   "nav": {
     "links": [
-      { "label": "Projects", "href": "#projects" },
-      { "label": "About", "href": "#about" },
-      { "label": "Contact", "href": "#contact" },
-      { "label": "Résumé site", "href": "https://profile.shunzz.com", "rel": "me" }
+      {
+        "label": "Projects",
+        "href": "#projects"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      },
+      {
+        "label": "Résumé site",
+        "href": "https://profile.shunzz.com",
+        "rel": "me"
+      }
     ],
     "switchLang": "中文",
     "toggleTheme": "Toggle theme",
@@ -20,12 +33,18 @@
   "hero": {
     "headline": "Build with AI. Ship for real.",
     "sub": "Spec-driven × AI agents × full-stack delivery. I don't just use AI to write code — I manage how AI works, and I build tools for it.",
-    "primaryCta": { "label": "See featured projects", "href": "#projects" },
-    "secondaryCta": { "label": "GitHub", "href": "https://github.com/m124578n" }
+    "primaryCta": {
+      "label": "See featured projects",
+      "href": "#projects"
+    },
+    "secondaryCta": {
+      "label": "GitHub",
+      "href": "https://github.com/m124578n"
+    }
   },
   "about": {
     "heading": "About",
-    "short": "Japanese Literature major turned AI-Native Software Engineer (JLPT N1). I ship enterprise systems, ML models and cloud infrastructure with a spec-driven, AI-agent workflow; I write Claude Skills, built an MCP Gateway, and teach the workflow internally. In the AI era an engineer's value is judgment and process design, not typing speed.",
+    "short": "Japanese Literature major turned AI-Native Software Engineer (JLPT N1). I ship enterprise systems (Text-to-SQL, an SRE triage agent, a job scheduler), ML models and cloud infrastructure with a spec-driven, AI-agent workflow, and launch my own products with the same workflow in days; I write Claude Skills, built an MCP Gateway, and teach the workflow internally. In the AI era an engineer's value is judgment and process design, not typing speed.",
     "acts": [
       {
         "title": "Act 1: An unusual start",
@@ -33,11 +52,11 @@
       },
       {
         "title": "Act 2: AI changed how I work",
-        "body": "Over the past year I moved my workflow to spec-driven development with AI agents: I adopted the open-source superpowers workflow (brainstorm → design spec → implementation plan → TDD), where AI executes and I review and decide, then tuned it for real projects — one shared AGENTS.md driving two agents, an automated AI code-review loop, and project-specific skills added to the flow (e.g. an Azure DevOps PR skill). With it I independently delivered an enterprise allocation platform (2.5 months), the AI service of a Customer Data Platform, demand-forecasting ML models, a company MCP Gateway in 3 days, and a full app with 62 tests in one day. Every number is in the git history."
+        "body": "Over the past year I moved my workflow to spec-driven development with AI agents: brainstorm → design spec → implementation plan → TDD, where AI executes and I review and decide. Real projects grew it into my own version — design phases produce only documents, and subagents implement only after decisions are final; a self-made dispatch skill routes each task to the cheapest model that is good enough; one shared AGENTS.md drives two agents; an automated AI code-review loop. With it I independently delivered an enterprise allocation platform (2.5 months), a CDP's AI service and job scheduler (88 commits and 1,190 unit tests in one day), took Text-to-SQL from PoC to a production service, and built a company MCP Gateway in 3 days. After hours, same workflow: a ramen map live on day one, a Japanese typing trainer with 470 tests in 3 working days. Every number is in the git history."
       },
       {
         "title": "Act 3: From user to builder",
-        "body": "I don't just use AI tools — I package team domain knowledge as Claude Skills with evals, built the gateway that lets every AI tool in the company reach internal APIs safely, and teach the workflow in internal talks. Next: build something that actually matters."
+        "body": "I don't just use AI tools — I package team domain knowledge as Claude Skills with evals, built the gateway that lets every AI tool in the company reach internal APIs safely, wrote a Claude Code mod that shows context usage and cost in real time, and draw boundaries for AI agents: proposal-only changes gated by automated tests, zero shell and zero cloud permissions, never writing to third-party platforms on a user's behalf. I also learned to reject upgrades with data: a 65-case eval showed the bottleneck was the rules, not the model, so I built human-precedent override instead and triage accuracy went from 12% to 80%. Next: build something that actually matters."
       }
     ],
     "readMore": "Read the full story"
@@ -48,25 +67,25 @@
       {
         "title": "Ship products with AI",
         "points": [
-          "Enterprise retail allocation platform, delivered solo in 2.5 months",
-          "Career Agent, an AI job-search assistant, live in 3 days with real users",
-          "A Flask daily-log system in one day, 62 tests"
+          "Enterprise retail allocation platform, delivered solo in 2.5 months; a CDP job scheduler with 1,190 unit tests",
+          "menmap ramen map live on day one; pachipachi Japanese typing trainer with 470 tests in 3 working days",
+          "Career Agent, an AI job-search assistant, live in 3 days with real users"
         ]
       },
       {
         "title": "Manage how AI works",
         "points": [
-          "Spec-driven (superpowers workflow): brainstorm → spec → plan → TDD, plus project-specific skills",
-          "One shared AGENTS.md driving Claude Code and Copilot CLI",
-          "Automated AI code-review loop until it converges"
+          "Spec-driven: brainstorm → spec → plan → TDD; design phases produce documents only, subagents implement after decisions are final",
+          "A dispatch skill that tiers work: haiku to find, sonnet for well-specified tasks, opus for concurrency and cross-file changes; 7 worktree agents in parallel, merged the same day",
+          "One shared AGENTS.md driving Claude Code and Copilot CLI; an automated AI code-review loop until it converges"
         ]
       },
       {
         "title": "Build tools for AI",
         "points": [
-          "Self-built MCP Gateway wrapping internal APIs as MCP tools",
-          "Domain knowledge packaged as Claude Skills with evals",
-          "Internal talks on prototype-driven requirement alignment"
+          "Self-built MCP Gateway wrapping internal APIs as MCP tools, with both input and output audited",
+          "Domain knowledge packaged as Claude Skills with evals; a Claude Code mod showing context usage and cost live",
+          "Boundaries for AI agents: proposal-only changes gated by tests, zero shell and zero cloud permissions, never writing to third-party platforms for a user"
         ]
       }
     ]
@@ -78,56 +97,276 @@
     "items": [
       {
         "name": "Career Agent",
-        "tagline": "AI job-search assistant: upload résumé → AI diagnosis → auto-crawl listings → fit ranking → tailored cover letters",
-        "story": "Built so others could solve their own problem with a tool. The launch post on Threads passed 10K views and it has real users.",
-        "tags": ["FastAPI", "MongoDB", "Playwright", "Claude API", "React", "TypeScript"],
+        "tagline": "AI job-search assistant: upload résumé → AI diagnosis → auto-crawl listings → fit ranking → tailored cover letters → application board",
+        "story": "Built so others could solve their own problem with a tool. The launch post on Threads passed 10K views and it has real users. It later grew a local edition: reads your logged-in job-site data and runs a tool-use chat agent as a \"job-search commander\" — but the agent never applies on your behalf.",
+        "tags": [
+          "FastAPI",
+          "MongoDB",
+          "curl_cffi",
+          "Claude API",
+          "React",
+          "TypeScript"
+        ],
         "stats": [
-          { "value": "3 days", "label": "to launch" },
-          { "value": "73", "label": "commits" },
-          { "value": "10K+", "label": "post views" }
+          {
+            "value": "3 days",
+            "label": "to launch"
+          },
+          {
+            "value": "543",
+            "label": "commits"
+          },
+          {
+            "value": "10K+",
+            "label": "post views"
+          }
         ],
         "links": [
-          { "label": "Live", "href": "https://jobtracker.shunzz.com" },
-          { "label": "GitHub", "href": "https://github.com/m124578n/career_agent" }
+          {
+            "label": "Live",
+            "href": "https://jobtracker.shunzz.com"
+          },
+          {
+            "label": "GitHub",
+            "href": "https://github.com/m124578n/career_agent"
+          }
         ],
         "featured": true
       },
       {
-        "name": "Suancui (酸脆)",
-        "tagline": "Threads AI roast generator: enter a handle → four roast styles as share cards → share to unlock hidden styles",
-        "story": "Product thinking and a lesson in failure: Threads' anti-scraping returned 200 with gutted content, so the AI fabricated personalities. \"Never fabricate\" became a product rule. It spread less than Career Agent — tools that solve real problems travel further than entertainment.",
-        "tags": ["Cloudflare Workers", "Hono", "KV", "React", "npm workspaces"],
+        "name": "SRE-agent",
+        "tagline": "Azure Data Factory failure triage: read-only against ADF, detects failures every 5 minutes → de-duplicates into incidents → rules first, LLM as fallback → a Teams card tells the on-call engineer the conclusion, what to do now and what to check first",
+        "story": "Rejected a model upgrade with data: on 65 eval cases Opus looked far ahead, but with duplicates removed it tied with gpt-mini — the bottleneck was the actions the rules suggested, not the model. So I built human-precedent override instead. The learning agent is proposal-only: a human clicks apply, pytest reverts failures, passing changes commit; zero shell, zero Azure permissions. Designed and built solo in about five weeks.",
+        "tags": [
+          "Python",
+          "Azure Data Factory",
+          "Azure OpenAI",
+          "Claude Opus",
+          "Teams",
+          "Streamlit"
+        ],
         "stats": [
-          { "value": "1 day", "label": "to launch" },
-          { "value": "67", "label": "commits" },
-          { "value": "4", "label": "packages, each tested" }
+          {
+            "value": "12% → 80%",
+            "label": "action accuracy"
+          },
+          {
+            "value": "25% → 92%",
+            "label": "act / don't act"
+          },
+          {
+            "value": "208",
+            "label": "tests"
+          },
+          {
+            "value": "140",
+            "label": "incidents"
+          }
+        ],
+        "links": [],
+        "featured": true
+      },
+      {
+        "name": "Text-to-SQL",
+        "tagline": "Natural-language queries over 920M transaction rows: understand → code-side guards → option-based clarification → generate SQL → validation and an EXPLAIN gate → code computes statistics, the LLM only interprets",
+        "story": "From PoC to a production service: sqlglot dialect packs for both T-SQL and PostgreSQL, a semantic model where every fact carries confidence and evidence, 10 ADRs. Guard rule: any condition that cannot become SQL is asked back, never silently dropped. Once other systems asked to onboard, the positioning became \"the execution engine plus a 13-step onboarding process is the product\".",
+        "tags": [
+          "FastAPI",
+          "sqlglot",
+          "Azure Synapse",
+          "Claude",
+          "Azure OpenAI",
+          "DuckDB"
+        ],
+        "stats": [
+          {
+            "value": "10/10",
+            "label": "gold SQL"
+          },
+          {
+            "value": "23/23",
+            "label": "behavior tests"
+          },
+          {
+            "value": "0",
+            "label": "fabricated insights"
+          },
+          {
+            "value": "650s → 338s",
+            "label": "data profiling"
+          }
         ],
         "links": [],
         "featured": false
       },
       {
+        "name": "menmap (麵咩撲)",
+        "tagline": "Taipei ramen map: daily Google Maps harvesting → open-now / metro / style filters → a \"where today\" dice → ramen diary and friends",
+        "story": "Fourteen minutes from pricing Google Places API to dropping it: the scraper runs at home and the cloud only reads. Tests showed datacenter IPs get degraded, stripped-down pages, so the collector stays home. LLM classification of 491 shops cost US$2.5. Worker-rendered SEO pages, self-written Google OAuth, $0 a month.",
+        "tags": [
+          "Python",
+          "React",
+          "MapLibre",
+          "Hono",
+          "Cloudflare D1",
+          "Claude"
+        ],
+        "stats": [
+          {
+            "value": "Day 1",
+            "label": "live"
+          },
+          {
+            "value": "130",
+            "label": "commits / 15 days"
+          },
+          {
+            "value": "500+",
+            "label": "ramen shops"
+          },
+          {
+            "value": "$0",
+            "label": "per month"
+          }
+        ],
+        "links": [
+          {
+            "label": "Live",
+            "href": "https://menmap.shunzz.com"
+          }
+        ],
+        "featured": false
+      },
+      {
+        "name": "pachipachi (ぱちぱち)",
+        "tagline": "Japanese typing trainer: romaji input judged key by key into kana, from kana charts to N1 vocabulary, timed leaderboards, and your own lyrics synced to YouTube",
+        "story": "Seven worktree subagents built it in parallel and merged the same day. The server recomputes every score from the client's key log and applies six anticheat rules — it never trusts client numbers. Lyrics copyright was researched (JASRAC, Taiwan copyright law) before design: shared timelines store only hashes, notice-and-takedown, three strikes.",
+        "tags": [
+          "SvelteKit",
+          "Svelte 5",
+          "TypeScript",
+          "Cloudflare D1",
+          "kuromoji"
+        ],
+        "stats": [
+          {
+            "value": "3",
+            "label": "working days"
+          },
+          {
+            "value": "470",
+            "label": "tests"
+          },
+          {
+            "value": "26K",
+            "label": "lines"
+          },
+          {
+            "value": "7",
+            "label": "parallel agents"
+          }
+        ],
+        "links": [
+          {
+            "label": "Live",
+            "href": "https://pachipachi.shunzz.com"
+          }
+        ],
+        "featured": false
+      },
+      {
         "name": "MCP Gateway",
         "tagline": "Wraps internal enterprise APIs as MCP tools so any AI coding agent reaches them safely through one entry point",
-        "story": "Design focus: per-client auth, SSRF protection, encrypted upstream credentials, audit logs with sensitive-parameter masking. Tool catalog lives in a DB — approved tools go live without code changes or restarts.",
-        "tags": ["Python", "MCP SDK", "Starlette", "SQLAlchemy", "pytest"],
+        "story": "Design focus: per-client auth, SSRF protection, encrypted upstream credentials, audit logs with sensitive-parameter masking — both input and output are recorded. Tool catalog lives in a DB; approved tools go live without code changes or restarts. One admin page generates connection configs for eight AI clients.",
+        "tags": [
+          "Python",
+          "MCP SDK",
+          "Starlette",
+          "SQLAlchemy",
+          "pytest"
+        ],
         "stats": [
-          { "value": "3 days", "label": "to v1" },
-          { "value": "20+", "label": "test files" }
+          {
+            "value": "3 days",
+            "label": "to v1"
+          },
+          {
+            "value": "20+",
+            "label": "test files"
+          },
+          {
+            "value": "8",
+            "label": "AI clients"
+          }
         ],
         "links": [],
         "featured": false
       },
       {
         "name": "Enterprise delivery",
-        "tagline": "Retail allocation platform, CDP AI service, demand-forecasting ML, Azure IaC",
-        "story": "Delivered solo with AI collaboration at a retail group's IT subsidiary: a 2.5-month allocation platform (FastAPI + React 19), a CDP AI service on a Google ADK pipeline, LightGBM/CatBoost allocation models, and modular Bicep infrastructure.",
-        "tags": ["FastAPI", "React 19", ".NET 8", "Google ADK", "Azure", "Bicep", "LightGBM"],
+        "tagline": "Retail allocation platform, CDP batch evolution and job scheduler, performance root-causing, demand-forecasting ML, Azure IaC",
+        "story": "Delivered solo with AI collaboration at a retail group's IT subsidiary: a 2.5-month allocation platform (FastAPI + React 19); ADF polling replaced by a queue, then by a single-table scheduler, with the production cutover led by me; three measurement-first performance root-causes with zero builder changes; LightGBM/CatBoost allocation models; Bicep IaC reconciled with portal drift.",
+        "tags": [
+          "FastAPI",
+          "React 19",
+          ".NET",
+          "Azure Synapse",
+          "Azure Data Factory",
+          "Bicep",
+          "LightGBM"
+        ],
         "stats": [
-          { "value": "2.5 mo", "label": "allocation platform" },
-          { "value": "1,100+", "label": "files" },
-          { "value": "6", "label": "CDP repos" }
+          {
+            "value": "2.5 mo",
+            "label": "allocation platform"
+          },
+          {
+            "value": "559s → 0.4s",
+            "label": "root-caused"
+          },
+          {
+            "value": "1,190",
+            "label": "scheduler unit tests"
+          },
+          {
+            "value": "1,100+",
+            "label": "files"
+          }
         ],
         "links": [],
+        "featured": false
+      },
+      {
+        "name": "Suancui (酸脆)",
+        "tagline": "Threads AI roast generator: enter a handle → four roast styles as share cards → share to unlock hidden styles",
+        "story": "Product thinking and a lesson in failure: Threads' anti-scraping returned 200 with gutted content, so the AI fabricated personalities. \"Never fabricate\" became a product rule. It spread less than Career Agent — tools that solve real problems travel further than entertainment.",
+        "tags": [
+          "Cloudflare Workers",
+          "Hono",
+          "KV",
+          "React",
+          "npm workspaces"
+        ],
+        "stats": [
+          {
+            "value": "1 day",
+            "label": "to launch"
+          },
+          {
+            "value": "67",
+            "label": "commits"
+          },
+          {
+            "value": "4",
+            "label": "packages, each tested"
+          }
+        ],
+        "links": [
+          {
+            "label": "Live",
+            "href": "https://suancui.shunzz.com"
+          }
+        ],
         "featured": false
       }
     ]
@@ -135,16 +374,39 @@
   "proof": {
     "heading": "Footprints",
     "items": [
-      { "label": "GitHub", "value": "m124578n", "href": "https://github.com/m124578n" },
-      { "label": "Blog", "value": "56+ posts incl. a 30-day writing challenge", "href": "https://m124578n.github.io" },
-      { "label": "LinkedIn", "value": "john19980215", "href": "https://www.linkedin.com/in/john19980215/" },
-      { "label": "Threads", "value": "@m23568n", "href": "https://www.threads.net/@m23568n" },
-      { "label": "Languages", "value": "Chinese · English · Japanese (JLPT N1)" }
+      {
+        "label": "GitHub",
+        "value": "m124578n",
+        "href": "https://github.com/m124578n"
+      },
+      {
+        "label": "Blog",
+        "value": "56+ posts incl. a 30-day writing challenge",
+        "href": "https://m124578n.github.io"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "john19980215",
+        "href": "https://www.linkedin.com/in/john19980215/"
+      },
+      {
+        "label": "Threads",
+        "value": "@m23568n",
+        "href": "https://www.threads.net/@m23568n"
+      },
+      {
+        "label": "Live products",
+        "value": "menmap · pachipachi · Career Agent · Suancui · this site — all on Cloudflare, $0 a month"
+      },
+      {
+        "label": "Languages",
+        "value": "Chinese · English · Japanese (JLPT N1)"
+      }
     ]
   },
   "footer": {
     "contact": "Get in touch",
     "email": "m23568n@gmail.com",
-    "note": "Built with Astro, deployed on Cloudflare Pages — and yes, built together with AI."
+    "note": "Built with Astro, deployed on Cloudflare Workers — and yes, built together with AI."
   }
 }

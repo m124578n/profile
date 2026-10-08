@@ -17,6 +17,22 @@
 .group h4 { margin: 0 0 .2em; font-size: .95rem; }
 .print-btn { font: inherit; }
 
+/* 精簡預設:每個項目先給一行 lead,點 summary 才展開細節 */
+.fold { margin: 0; }
+.fold > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; column-gap: var(--space-3); align-items: baseline; padding: .15em 0; border-radius: 4px; }
+.fold > summary::-webkit-details-marker { display: none; }
+.fold > summary:hover .lead, .fold > summary:focus-visible .lead { color: var(--fg); }
+.fold > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.fold > summary h4 { grid-column: 1; margin: 0; }
+.fold > summary .lead { grid-column: 1; font-size: .95rem; line-height: 1.55; color: var(--fg-muted); max-width: var(--measure); }
+.fold > summary .hint { grid-column: 2; grid-row: 1 / span 2; align-self: start; font-family: var(--font-mono); font-size: .75rem; color: var(--fg-muted); white-space: nowrap; }
+.fold > summary .hint::after { content: " ▸"; display: inline-block; transition: transform .2s var(--ease, ease); }
+.fold[open] > summary .hint::after { transform: rotate(90deg); }
+.fold[open] > summary { margin-bottom: .2em; }
+.fold > ul, .fold > p { margin-top: .35em; padding-left: 1.1em; border-left: 2px solid var(--line); margin-left: .2em; }
+.fold > p { padding-left: .9em; }
+.group.fold + .group.fold { margin-top: var(--space-2); }
+
 @media print {
   :root, :root[data-theme="dark"], :root[data-theme="light"] { --bg: #fff; --bg-elev: #fff; --fg: #000; --fg-muted: #444; --line: #bbb; --accent: #000; }
   html, html[data-theme="dark"] { color-scheme: light; }
@@ -31,4 +47,7 @@
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8.5pt; color: #444; }
   a[href^="mailto:"]::after { content: ""; }
   .tag { border-color: #999; }
+  .fold > summary .hint { display: none; }
+  .fold > summary { display: block; }
+  .fold > ul, .fold > p { border-left: none; margin-left: 0; }
 }

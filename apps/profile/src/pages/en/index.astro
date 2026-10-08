@@ -16,8 +16,8 @@ const r = loadResume(locale);
   <div class="resume">
     <ResumeHeader header={r.header} labels={r.labels} {locale} />
     <Positioning items={r.positioning} heading={r.labels.positioning} />
-    <Experience items={r.experience} heading={r.labels.experience} />
-    <SideProjects items={r.sideProjects} heading={r.labels.sideProjects} />
+    <Experience items={r.experience} heading={r.labels.experience} labels={r.labels} />
+    <SideProjects items={r.sideProjects} heading={r.labels.sideProjects} labels={r.labels} />
     <Skills items={r.skills} heading={r.labels.skills} />
     <Education education={r.education} languages={r.languages} labels={r.labels} />
   </div>

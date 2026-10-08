@@ -52,3 +52,14 @@ test('sitemap/robots/og', () => {
   assert.equal(buf.readUInt32BE(16), 1200); assert.equal(buf.readUInt32BE(20), 630);
   assert.match(html('index.html'), /og:image" content="https:\/\/profile\.shunzz\.com\/og\.png"/);
 });
+
+test('精簡預設:群組與 side project 以 details 摺疊,header 有全部展開/收合', () => {
+  for (const p of ['index.html', 'en/index.html']) {
+    const h = html(p);
+    assert.ok((h.match(/<details class="group fold" data-fold[^>]*>/g) ?? []).length >= 10, p);
+    assert.ok((h.match(/<details class="fold" data-fold[^>]*>/g) ?? []).length >= 7, p);
+    assert.match(h, /data-fold-all="open"/);
+    assert.match(h, /data-fold-all="close"/);
+    assert.match(h, /beforeprint/);
+  }
+});

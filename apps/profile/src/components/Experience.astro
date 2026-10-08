@@ -1,7 +1,7 @@
 ---
 import type { Resume } from '../content/schema';
-interface Props { items: Resume['experience']; heading: string }
-const { items, heading } = Astro.props;
+interface Props { items: Resume['experience']; heading: string; labels: Resume['labels'] }
+const { items, heading, labels } = Astro.props;
 ---
 <section id="experience" class="section container">
   <h2>{heading}</h2>
@@ -13,12 +13,26 @@ const { items, heading } = Astro.props;
       </div>
       {e.intro && <p class="intro">{e.intro}</p>}
       {e.groups?.map((g) => (
-        <div class="group">
-          <h4>{g.name}</h4>
+        <details class="group fold" data-fold>
+          <summary>
+            <h4>{g.name}</h4>
+            <span class="lead">{g.lead}</span>
+            <span class="hint" aria-hidden="true">{labels.details}</span>
+          </summary>
           <ul>{g.bullets.map((b) => <li>{b}</li>)}</ul>
-        </div>
+        </details>
       ))}
-      {e.bullets.length > 0 && <ul>{e.bullets.map((b) => <li>{b}</li>)}</ul>}
+      {e.bullets.length > 0 && (e.lead ? (
+        <details class="fold" data-fold>
+          <summary>
+            <span class="lead">{e.lead}</span>
+            <span class="hint" aria-hidden="true">{labels.details}</span>
+          </summary>
+          <ul>{e.bullets.map((b) => <li>{b}</li>)}</ul>
+        </details>
+      ) : (
+        <ul>{e.bullets.map((b) => <li>{b}</li>)}</ul>
+      ))}
       <ul class="tags" role="list">{e.stack.map((s) => <li class="tag" role="listitem">{s}</li>)}</ul>
     </article>
   ))}

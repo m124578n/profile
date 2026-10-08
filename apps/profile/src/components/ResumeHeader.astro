@@ -10,7 +10,11 @@ const { header, labels, locale } = Astro.props;
       <h1>{header.name}</h1>
       <p class="latin" lang={locale === 'en' ? 'zh-Hant' : 'en'}>{header.latinName}</p>
     </div>
-    <button type="button" class="btn print-btn" data-print>{labels.print}</button>
+    <div class="actions no-print">
+      <button type="button" class="btn ghost" data-fold-all="open">{labels.expandAll}</button>
+      <button type="button" class="btn ghost" data-fold-all="close">{labels.collapseAll}</button>
+      <button type="button" class="btn print-btn" data-print>{labels.print}</button>
+    </div>
   </div>
   <p class="title">{header.title} · <span class="meta">{header.location}</span></p>
   <ul class="contacts" role="list">
@@ -25,7 +29,20 @@ const { header, labels, locale } = Astro.props;
   .title { font-weight: 600; margin-top: var(--space-2); }
   .contacts { list-style: none; padding: 0; margin: 0 0 var(--space-3); display: flex; flex-wrap: wrap; gap: .4em 1.2em; font-size: .95rem; }
   .summary { font-size: 1.02rem; }
+  .actions { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; }
+  .btn.ghost { background: transparent; color: var(--fg-muted); border: 1px solid var(--line); }
+  .btn.ghost:hover { color: var(--fg); border-color: var(--fg-muted); }
 </style>
 <script>
+  const folds = () => Array.from(document.querySelectorAll<HTMLDetailsElement>('details[data-fold]'));
+  const setAll = (open: boolean) => folds().forEach((d) => { d.open = open; });
+
+  document.querySelectorAll<HTMLButtonElement>('[data-fold-all]').forEach((b) =>
+    b.addEventListener('click', () => setAll(b.dataset.foldAll === 'open')));
   document.querySelectorAll('[data-print]').forEach((b) => b.addEventListener('click', () => window.print()));
+
+  // 列印/存 PDF 時一律展開全部,印完還原原本的開合狀態
+  let saved: boolean[] = [];
+  window.addEventListener('beforeprint', () => { saved = folds().map((d) => d.open); setAll(true); });
+  window.addEventListener('afterprint', () => { folds().forEach((d, i) => { d.open = saved[i] ?? false; }); });
 </script>

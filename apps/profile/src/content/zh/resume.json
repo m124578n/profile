@@ -1,16 +1,29 @@
 {
   "meta": {
     "title": "詹舜智 Chan Shun-Chih — AI-Native Software Engineer 履歷",
-    "description": "詹舜智的履歷:AI-Native Software Engineer · Senior Systems Analyst。以規格驅動 + AI Agent 工作流交付企業級系統、ML 模型、雲端 IaC 與 AI 產品。Python · Azure · React · MCP · JLPT N1。",
+    "description": "詹舜智的履歷:AI-Native Software Engineer · Senior Systems Analyst。以規格驅動 + AI Agent 工作流交付企業級系統、Text-to-SQL、SRE 判讀系統、ML 模型與上線產品。Python · Azure · React · MCP · JLPT N1。",
     "name": "詹舜智 (Chan Shun-Chih)",
     "jobTitle": "AI-Native Software Engineer · Senior Systems Analyst"
   },
   "nav": {
     "links": [
-      { "label": "經歷", "href": "#experience" },
-      { "label": "專案", "href": "#side-projects" },
-      { "label": "技能", "href": "#skills" },
-      { "label": "個人品牌站", "href": "https://shunzz.com", "rel": "me" }
+      {
+        "label": "經歷",
+        "href": "#experience"
+      },
+      {
+        "label": "專案",
+        "href": "#side-projects"
+      },
+      {
+        "label": "技能",
+        "href": "#skills"
+      },
+      {
+        "label": "個人品牌站",
+        "href": "https://shunzz.com",
+        "rel": "me"
+      }
     ],
     "switchLang": "English",
     "toggleTheme": "切換深淺色",
@@ -26,7 +39,10 @@
     "languages": "語言能力",
     "contact": "聯絡",
     "print": "列印 / 存成 PDF",
-    "backToBrand": "回 shunzz.com"
+    "backToBrand": "回 shunzz.com",
+    "expandAll": "全部展開",
+    "collapseAll": "全部收合",
+    "details": "詳細"
   },
   "header": {
     "name": "詹舜智",
@@ -34,17 +50,41 @@
     "title": "AI-Native Software Engineer · Senior Systems Analyst",
     "location": "台北，台灣",
     "contacts": [
-      { "label": "m23568n@gmail.com", "href": "mailto:m23568n@gmail.com" },
-      { "label": "github.com/m124578n", "href": "https://github.com/m124578n", "rel": "me" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/john19980215/", "rel": "me" },
-      { "label": "Threads @m23568n", "href": "https://www.threads.net/@m23568n", "rel": "me" }
+      {
+        "label": "m23568n@gmail.com",
+        "href": "mailto:m23568n@gmail.com"
+      },
+      {
+        "label": "github.com/m124578n",
+        "href": "https://github.com/m124578n",
+        "rel": "me"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/john19980215/",
+        "rel": "me"
+      },
+      {
+        "label": "Threads @m23568n",
+        "href": "https://www.threads.net/@m23568n",
+        "rel": "me"
+      }
     ],
-    "summary": "4 年 Python 後端與 AI 應用開發經驗。以 AI Agent(Claude Code、GitHub Copilot CLI)為核心的規格驅動開發流程(採用開源 superpowers 工作流並依專案調整)，獨立完成企業級系統、ML 模型、雲端 IaC 到個人產品的全端交付;並將此工作流程制度化(內部技術分享、含 evals 的可複用 Claude Skills)、工具化(自建 MCP Gateway 作為公司 AI 基礎設施)。曾從零主導 2 款 AI 影片生成產品，服務 7,000+ 名使用者，將月基礎設施成本由 NT$40K 降至 NT$20K、失敗率由 30% 降至 1% 以下。JLPT N1。"
+    "summary": "4 年 Python 後端與 AI 應用開發。以 AI Agent(Claude Code、GitHub Copilot CLI)為核心的規格驅動流程，獨立交付企業級系統、Text-to-SQL 與 SRE 判讀系統、ML 模型、雲端 IaC 到個人產品;並把流程制度化(含 evals 的 Claude Skills、subagent 分級派工)與工具化(自建 MCP Gateway、Claude Code mod)。曾主導 2 款 AI 影片產品服務 7,000+ 使用者，月成本減半、失敗率 30% → <1%。JLPT N1。"
   },
   "positioning": [
-    { "title": "用 AI 交付產品", "body": "企業級專案 + side projects，速度與品質有 git 紀錄佐證:2.5 個月獨立交付配貨平台、3 天上線 MCP Gateway、1 天完成 62 個測試的應用。" },
-    { "title": "管理 AI 的方法論", "body": "spec 先行、TDD、自動化 AI code review 迴圈、prompt 治理;共用 AGENTS.md 同時駕馭 Claude Code 與 Copilot CLI。" },
-    { "title": "為 AI 造工具", "body": "自建 MCP Gateway、撰寫含 evals 的 Claude Agent Skills、加上專案專用 skills(如 Azure DevOps PR 流程)，並對內推廣。" }
+    {
+      "title": "用 AI 交付產品",
+      "body": "企業級專案 + 5 個上線 side project，速度與品質都有 git 紀錄:Text-to-SQL 從 PoC 到正式服務、SRE-agent 5 週獨立完成、任務排程器一天 1,190 測試、拉麵地圖第一天上線。"
+    },
+    {
+      "title": "管理 AI 的方法論",
+      "body": "spec 先行、TDD、AI code review 迴圈;設計期只留文件、定案後授權 subagent 實作;用 eval 做決策——65 筆評估否決換模型，改做前例覆寫 12% → 80%。"
+    },
+    {
+      "title": "為 AI 造工具",
+      "body": "自建 MCP Gateway、含 evals 的 Claude Skills、Claude Code mod;替 AI agent 畫邊界:提案制 + 測試門檻、零 shell 零雲端權限、不可靜默丟棄查詢條件。"
+    }
   ],
   "experience": [
     {
@@ -52,72 +92,157 @@
       "role": "Senior Systems Analyst(AI 應用工程師 / 高級系統分析師)",
       "period": "2026/05 – 現在",
       "location": "台北",
-      "intro": "負責雲端架構規劃與 AI 應用開發，橫跨 Cloud Architecture、DevOps、Data Engineering 與 AI 產品開發。",
+      "intro": "負責雲端架構規劃、批次與資料平台、AI 應用開發與維運，橫跨 Cloud Architecture、DevOps、Data Engineering 與 AI 產品開發。",
       "groups": [
         {
-          "name": "零售配貨標準化平台(主力專案)",
+          "name": "零售客戶 CDP:批次打包平台演進(ADF 輪詢 → Queue → 任務排程器)",
+          "bullets": [
+            "將 ADF 每 15 分鐘輪詢的打包流程改為 .NET BackgroundService + Azure Storage Queue:sp_getapplock 全域併發認領、heartbeat 續租、poison queue + 失敗通知、RecoveryScan 兜底;認領延遲 15 分鐘 → 秒級;主導 prod 切換，前一日於 test 環境彩排並預先排除 trigger 分支與 storage 防火牆問題",
+            "三次事故後的韌性修補:Run From Package 根治部署競態、下載清單串流化根治 664 萬人名單 OOM、版更/重啟秒級交棒取代 60 分鐘殭屍回收、SQL 連線暫時性錯誤重試",
+            "設計並實作第二代任務排程器(dev 完成、待 prod):單一 job 表排程六種任務、每資源一把 applock、狀態轉換一律「條件更新看影響列數」、逾時用 DB 時鐘、擴機與併發只改表不重部署;取代 ADF 三條鏈與 Storage Queue;710 行 spec、1,190 單元測試、dev 整合測試 68/68;修復跨實例 race 與跨執行緒關連線死鎖",
+            "工作方法:設計期只留文件(spec + 約 40 份 brief/review)，定案後授權 subagent 實作(sonnet 做簡單 task、opus 做 SQL/併發)、每 task review;單日 88 commits"
+          ],
+          "lead": "ADF 15 分鐘輪詢 → Storage Queue → 單表任務排程器;主導 prod 切換、三次事故修補，二代 1,190 單元測試"
+        },
+        {
+          "name": "零售客戶 CDP:打包 SQL 重寫與效能根因追查",
+          "bullets": [
+            "將 Razor 模板拼接 SQL 重寫為參數化 C# SqlBuilder(四種 BoxType)並修掉三個已知 bug;動手前先對 Synapse 做參數化行為 PoC(CTAS 多語句、暫存表可見性、TOP(@var)、字串參數型別)，據此決定 DECLARE fallback;由 Copilot 依 15 個 TDD task 實作、Claude 分批 review",
+            "量測先於改碼的三次根因追查，builder 零修改:NVARCHAR 隱式轉換毀掉 82.7M 列索引 seek → 參數側 CONVERT，559s → 0.4s;dev 未同步 prod view 定義 → 單盒 1237s → 12.5s、整包 smoke 24m45s → 47s;appsettings.json 因 csproj 設定從未部署 → 3600s 逾時 ×3 改為 5.7 分完包，並修正預設值防再犯",
+            "儀表板 prod 契約改版(SP 三參數化、打包完成後同訊息接算儀表板，取代 ADF 派工)、SP 補桶子讓無消費包也能過檢核;多次引用的 CTE 改 CTAS 物化:最大包 12.6M 人 425/364s → 141/131s，四種規模輸出逐列相同"
+          ],
+          "lead": "Razor 拼 SQL 改參數化 builder;三次量測先行的根因追查:559s → 0.4s、整包 24m45s → 47s，builder 零修改"
+        },
+        {
+          "name": "零售客戶 CDP:Text-to-SQL(PoC → 正式版)",
+          "bullets": [
+            "PoC v1 合成資料 + DuckDB 驗可行;PoC v2 直連 prod 複本(9.2 億交易列):理解 → value linking 程式守門 → 選項式反問(≤3 輪)→ 回顯理解 → 生 SQL → sql_guard 驗證與自動修正 → EXPLAIN 閘門 → 執行 → 程式算統計、LLM 只解讀",
+            "正式版:獨立 FastAPI 服務;sqlglot AST 方言包同時支援 T-SQL 與 PostgreSQL;語意模型 YAML 每條事實帶 confidence / evidence / review;10 份 ADR;資料探測 650s → 338s",
+            "評估體系:gold SQL 數字比對(容差 0.5%)10/10、行為測試(該問 / 不該問 / 做不到)23/23 × 2、洞察捏造檢查 0 捏造、可行動分數 3.3 → 4.17;Claude vs GPT 比較(結論深度 vs 約 100× 費用)",
+            "產品定位決定(ADR):得知其他兩個系統也要接入 → 從「單一系統專用」改為「執行引擎 + 13 階段導入流程」;守門原則「轉不成 SQL 的條件一律反問、禁止靜默丟棄」"
+          ],
+          "lead": "9.2 億列資料的自然語言查詢，PoC → 正式 FastAPI 服務;gold SQL 10/10、行為測試 23/23、捏造 0"
+        },
+        {
+          "name": "SRE-agent:Azure Data Factory 失敗判讀系統(獨立設計與實作，約 5 週)",
+          "bullets": [
+            "對 3 個 ADF factory / 44 條 pipeline 全程唯讀:每 5 分鐘偵測 Failed run → 規則去重成 incident(失敗鏈、軟失敗偵測)→「規則優先、LLM 補位、失敗退未分類」分類 → Teams Adaptive Card 給值班工程師(結論 / 現在做什麼 / 動手前檢查);約 9,900 行 Python、208 個測試、140 incidents",
+            "規則引擎 patterns / actions 白名單 / playbooks 全為 YAML 且每輪熱重載;LLM(Azure OpenAI，可切 Claude)只在規則未命中時呼叫(約 3% 案例)",
+            "以 eval 否決升級模型:65 筆評估 rules 12% / gpt-mini 46% / Opus 83%，但排除重複案例後兩模型打平 → 瓶頸在規則給的動作而非模型 → 改做「人工前例覆寫」，動作準確率 12% → 80%、「要不要動手」25% → 92%;每日摘要降噪 53%、零誤收",
+            "Learning agent(Claude Opus on Microsoft Foundry)採提案制:人在網站按「套用」才寫檔、套用後自動跑 pytest 不過即還原、通過自動 commit;工具只開讀 DB / 讀知識檔 / 留言 / 提案，零 shell、零 Azure 權限",
+            "Streamlit 值班網站(含 /mobile)、supervisor 三程序守護 + 看門狗、SQLite / Azure Table 雙儲存實作、歸檔 73,292 筆 ADF 歷史 run"
+          ],
+          "lead": "對 ADF 唯讀的失敗判讀系統，約 5 週獨立完成;用 eval 否決換模型、改做前例覆寫，準確率 12% → 80%"
+        },
+        {
+          "name": "零售配貨標準化平台",
           "bullets": [
             "以 AI 協作開發於 2.5 個月內獨立交付企業級零售配貨/配量系統(約 1,100+ 檔案)，大量投入需求訪談，依各門市銷售數據與特殊需求設計配貨邏輯",
             "後端 Python 3.12 / FastAPI / SQLAlchemy 2 / Alembic / PostgreSQL，分層架構(api / core / engine / etl / repositories / services);前端 React 19 + TypeScript / Vite / TanStack Query·Table·Virtual / react-hook-form + zod / Tailwind 4",
             "Contract-first:openapi.json → openapi-typescript 自動生成前端型別，確保前後端契約同步",
             "CI/CD:Azure Pipelines,PR 觸發後端 pytest 與前端 lint/test/build 平行 job;後端 8 個測試模組、前端 56 個測試檔、UAT smoke 測試",
             "需求對齊:先以單檔 HTML prototype 讓需求方提前預覽並回饋，再進正式開發，大幅縮短「規格文件 → 開發 → 驗收」週期;完整文件紀律(decisions / lessons / runbooks / roadmap)"
-          ]
+          ],
+          "lead": "2.5 個月獨立交付企業級配貨系統(1,100+ 檔);FastAPI + React 19、contract-first、Azure Pipelines CI/CD"
         },
         {
           "name": "配量預測 ML 模型",
           "bullets": [
             "店鋪配量/配率預測:LightGBM、CatBoost、Optuna 超參數調校、isotonic calibration",
             "系統化實驗流程:baseline → 特徵工程 → ablation study → 模型 blending → 規則覆蓋層 → 誤配診斷;交付 ML 配量規劃草案、ER model 與 table schema"
-          ]
+          ],
+          "lead": "LightGBM / CatBoost 店鋪配量預測，Optuna 調校、系統化實驗流程(baseline → ablation → blending)"
         },
         {
-          "name": "企業級 CDP(Customer Data Platform,6 repos / 2,200+ 檔案)",
+          "name": "企業級 CDP(Customer Data Platform,6 repos / 2,200+ 檔案):AI API 與基礎",
           "bullets": [
-            "前端 React 19 + TS + TanStack Router/Query、.NET 8 Web API、.NET 8 批次系統(含單元測試);SQL Server 多 schema + Azure Synapse 倉儲(CTAS / HASH-distributed 優化)",
+            "前端 React 19 + TS + TanStack Router/Query、.NET Web API、.NET 批次系統(含單元測試);SQL Server 多 schema + Azure Synapse 倉儲(CTAS / HASH-distributed 優化)",
             "AI API:Python 3.13 + FastAPI + Google ADK agent pipeline + LiteLLM → Azure OpenAI;商品標籤自動分類(自 legacy 服務遷移)、三階段 pipeline 生成行銷文案;嚴謹 API 契約(四種狀態碼、per-user rate limiting、「誠實失敗、不做 fallback」)",
-            "每個 repo 三環境(dev/test/prod)Azure DevOps pipeline;產出 incident 記錄、架構追查手冊等維運文件"
-          ]
+            "每個 repo 三環境(dev/test/prod)Azure DevOps pipeline;產出 incident 記錄、架構追查手冊等維運文件;legacy 服務退役與 prod 設定缺失事故處理"
+          ],
+          "lead": "6 repos 的 CDP:React + .NET + Synapse;AI API 以 Google ADK pipeline 做商品標籤與行銷文案生成"
         },
         {
           "name": "MCP Gateway(自建 AI 基礎設施)",
           "bullets": [
             "將公司內部 HTTP API 統一封裝為 MCP tools，讓 Claude Code / Codex / Copilot 經單一入口安全存取內部系統;工具目錄存 DB，審核後即時上線、免改碼免重啟",
             "安全設計:per-client Bearer token 授權、SSRF 防護(拒絕 localhost/雲端 metadata + 允許清單)、上游憑證 Fernet 加密、稽核記錄含敏感參數遮罩",
-            "Python 3.12 / MCP SDK(Streamable HTTP)/ Starlette / SQLAlchemy 2 / Streamlit 管理後台;20+ 測試檔含 acceptance test(pytest-asyncio + respx);3 天完成 v1 上線"
-          ]
+            "Python 3.12 / MCP SDK(Streamable HTTP)/ Starlette / SQLAlchemy 2 / Streamlit 管理後台;20+ 測試檔含 acceptance test(pytest-asyncio + respx);3 天完成 v1 上線",
+            "增補:稽核記錄新增 output(UTF-8 邊界截斷 + 原始 byte 數標記)、八種 AI client 的 Connect 設定頁、per-client → per-user 權限草案"
+          ],
+          "lead": "3 天上線:內部 API 封裝為 MCP tools，per-client 授權、SSRF 防護、憑證加密、input/output 稽核"
+        },
+        {
+          "name": "便利商店自動訂貨系統:維運文件化",
+          "bullets": [
+            "為無接觸者撰寫維運上手計畫(10 節):盤點 183 條 ADF pipeline(39 條無觸發)、66 trigger、1,324 行核心 SP;風險表(單人維護、明文 SAS、無測試環境、全域暫存表)與四週學習路線",
+            "每日配信維運手冊:五段主線耗時與最晚啟動時間、emergency 平行機制、決策樹;關鍵洞察「ML timeout + retry 最壞卡 8 小時不報錯 → 用時間判斷(09:30 決策點)不能等告警」;BlobFuse 升級調查、ML pipeline retry / webhook 設計提案"
+          ],
+          "lead": "為自動訂貨系統寫維運上手計畫與每日配信手冊;盤點 183 條 pipeline、1,324 行核心 SP"
         },
         {
           "name": "Log 異常分析系統",
           "bullets": [
             "Gradio 介面兩層過濾大量 log → Azure OpenAI 分析異常 → SQLite 存檔;嚴格三層解耦(filter / ai / db);送 AI 前先做 token 預估與費用試算，超閾值警告"
-          ]
+          ],
+          "lead": "Gradio 兩層過濾 → Azure OpenAI 分析 → SQLite;送 AI 前先算 token 與費用"
         },
         {
           "name": "企業聊天機器人產品部署工程",
           "bullets": [
-            "企業聊天機器人產品(Java/JSP/Kotlin,700+ 檔)原始碼治理與 Docker 化:Compose 整合 MSSQL 2022、Redis Stack、Solr 9.5、自製 parser;DB 初始化、健康檢查、全新 VM 部署 SOP;git filter-repo 清理歷史、Git LFS 管理大檔"
-          ]
+            "企業聊天機器人產品(Java/JSP/Kotlin,700+ 檔)原始碼治理與 Docker 化:Compose 整合 MSSQL 2022、Redis Stack、Solr 9.5、自製 parser;DB 初始化、健康檢查、全新 VM 部署 SOP;git filter-repo 清理歷史、Git LFS 管理大檔;正式機與 UAT 版更(含教同事操作)、OOM / WSL 事件處理"
+          ],
+          "lead": "Java 企業聊天機器人(700+ 檔)Docker 化與部署 SOP;正式機與 UAT 版更、事件處理"
         },
         {
-          "name": "Azure IaC 與資料工程",
+          "name": "Azure IaC、資安與資料工程",
           "bullets": [
             "Bicep 模組化 IaC(network / keyvault / storage / postgres / appservice):IP 白名單 + Private Endpoint 雙路徑、Key Vault 集中機密、VNet Integration + RBAC，含 rollback 文件",
-            "Dify(開源 LLM 平台)on Azure Container Apps 部署(PostgreSQL + pgvector / Redis / Storage，含成本估算);Terraform 管理 LLM 資源群組;ADF pipeline 分析與設計(自動訂貨 / 庫存 / 銷售預測)、ML pipeline retry/webhook 設計"
-          ]
+            "IaC 與 Portal 手改實況對齊:what-if 因 listKeys() 與 runtime 參照回「無變更」→ 改用 az show 逐項比對 + activity log 追溯;RBAC assignment 沿用既有 GUID 避免 guid() 重複建;App Service Linux 容器重啟後 crontab 消失 → 啟動腳本重註冊排程",
+            "Dify(開源 LLM 平台)on Azure Container Apps 部署(PostgreSQL + pgvector / Redis / Storage，含成本估算);Terraform 管理 LLM 資源群組",
+            "PQC 加密資產盤點掃描器 M0:TLS / Key Vault / App Service / App Gateway 四來源盤點演算法、金鑰長度、到期日與量子風險等級(NIST FIPS 203/204/205)"
+          ],
+          "lead": "Bicep 模組化 IaC、與 Portal 手改對齊、Dify on Container Apps、PQC 加密資產掃描器"
         },
         {
           "name": "AI 工程方法論(制度化與推廣)",
           "bullets": [
             "以共用 AGENTS.md 同時駕馭 Claude Code 與 Copilot CLI 雙 agent，於企業專案實戰;git worktree 平行開發多分支",
-            "導入並營運 agent skill 工具鏈(開源 superpowers 工作流)，建立自動化 AI code review 迴圈(AI 修 code → commit → 回覆 review thread → 觸發再審，直到收斂)",
+            "導入並營運 agent skill 工具鏈，建立自動化 AI code review 迴圈(AI 修 code → commit → 回覆 review thread → 觸發再審，直到收斂)",
             "將團隊 domain 知識封裝為含 evals 的 Claude Skills(Azure Synapse 效能調校、ADF 開發標準)，並加上專案專用 skills(如 Azure DevOps PR 流程)",
+            "自製 dispatch skill 將任務分級派給最便宜夠用的模型(haiku 找 / sonnet 規格清楚 / opus 跨檔與併發);自製 Claude Code mod context-bar 即時顯示 context 用量、token 費用與 rate limit",
             "對內技術分享:「需求 → AI 快速 prototype → 使用者對齊 → 正式開發」工作流(14 頁大綱 + 講稿 + 4 張流程圖)，隨附 5 個去專案化可複用 skills"
-          ]
+          ],
+          "lead": "AGENTS.md 雙 agent、AI code review 迴圈、含 evals 的 Claude Skills、dispatch skill 與 context-bar mod、內部分享"
         }
       ],
       "bullets": [],
-      "stack": ["Python", "FastAPI", "React 19", "TypeScript", ".NET 8", "PostgreSQL", "SQL Server", "Azure Synapse", "Azure Data Factory", "Azure Container Apps", "Bicep", "Terraform", "Google ADK", "Azure OpenAI", "MCP", "LightGBM", "CatBoost", "Azure Pipelines", "Claude Code", "GitHub Copilot CLI"]
+      "stack": [
+        "Python",
+        "FastAPI",
+        "React 19",
+        "TypeScript",
+        "C# / .NET",
+        "PostgreSQL",
+        "SQL Server",
+        "Azure Synapse",
+        "Azure Data Factory",
+        "Azure Storage Queue",
+        "Azure Container Apps",
+        "Bicep",
+        "Terraform",
+        "Google ADK",
+        "Azure OpenAI",
+        "Microsoft Foundry",
+        "MCP",
+        "sqlglot",
+        "Streamlit",
+        "LightGBM",
+        "CatBoost",
+        "Azure Pipelines",
+        "Claude Code",
+        "GitHub Copilot CLI"
+      ]
     },
     {
       "company": "OSENSE Technology(光禾感知科技)",
@@ -132,7 +257,18 @@
         "開發 Osense AI——基於 LINE 的 AI 分身與聲音克隆系統(5,400+ 名使用者):整合 lip-sync、voice cloning，實作 LINE Bot 完整使用者流程;透過優化開源軟體錯誤與錯誤處理，失敗率 30% → <1%",
         "以 Gradio 與基礎前端框架快速開發 PoC 供客戶展示;導入 AI 工具加速開發"
       ],
-      "stack": ["FastAPI", "Celery", "PostgreSQL", "MongoDB", "Azure (VM, Container Apps)", "Docker", "FFmpeg", "Wav2Lip", "TTS (Azure Speech, ElevenLabs)"]
+      "stack": [
+        "FastAPI",
+        "Celery",
+        "PostgreSQL",
+        "MongoDB",
+        "Azure (VM, Container Apps)",
+        "Docker",
+        "FFmpeg",
+        "Wav2Lip",
+        "TTS (Azure Speech, ElevenLabs)"
+      ],
+      "lead": "主導 2 款 AI 影片 / 分身產品(7,000+ 使用者):生成時間 -50%、月成本 -50%、失敗率 30% → <1%"
     },
     {
       "company": "忠訓國際(Jung Shing International)",
@@ -145,61 +281,247 @@
         "開發 PDF 帳單資料擷取工具，自動抓取關鍵欄位寫入資料庫，將人工輸入簡化為欄位檢查",
         "導入 GitLab 版本控制與基礎開發流程;以 Repository Pattern 分離資料存取邏輯"
       ],
-      "stack": ["Python", "Django", "Selenium", "Requests", "GitLab CI", "jQuery", "Linux"]
+      "stack": [
+        "Python",
+        "Django",
+        "Selenium",
+        "Requests",
+        "GitLab CI",
+        "jQuery",
+        "Linux"
+      ],
+      "lead": "Django 內部系統、爬蟲與 PDF 帳單擷取工具、導入 GitLab CI/CD"
     }
   ],
   "sideProjects": [
     {
+      "name": "麵咩撲 menmap — 雙北拉麵地圖",
+      "period": "2026/09 – 上線中",
+      "desc": "每日自動採集 Google Maps(家用機排程、雙後端 requests + Playwright、每家與上次快照 diff)→ D1 + 靜態 JSON;MapLibre 地圖、營業中/捷運/種類篩選、「今天吃哪間」、自寫 Google OAuth(HS256 JWT HttpOnly)、麵史/麵友/麵單社群、PWA、Worker 直出 SEO 頁 + schema.org;LLM(Claude Sonnet on Foundry)分類 15 種拉麵標籤 491 家 US$2.5。Python + TS 約 24,000 行、D1 21 表、Worker 約 58 路由、Playwright e2e。第一天 34 commits 即含採集管線 + 地圖 + API + 正式網域上線;15 天 130 commits。決策:以 14 分鐘估價否決 Google Places API(月 US$70–90);實測資料中心 IP 會被 Google 降級 → 爬蟲留家裡;D1 讀取額度爆量後以邊緣快取與 SQL 框範圍修復。月費 $0。",
+      "links": [
+        {
+          "label": "Live",
+          "href": "https://menmap.shunzz.com"
+        }
+      ],
+      "lead": "雙北拉麵地圖，第一天上線;每日自動採集、D1、LLM 分類、Worker 直出 SEO 頁;月費 $0"
+    },
+    {
+      "name": "ぱちぱち pachipachi — 日文打字練習",
+      "period": "2026/09 – 上線中",
+      "desc": "羅馬字輸入逐鍵判定假名(純 TS 引擎:最長匹配 tokenize、っ/ん 規則、狀態機、score = kpm × accuracy²、replay);五十音 → N5–N1 單字 500 / 句子 100 / 商用書信 / 網路用語、40 課程、27 個計時賽排行榜;自貼歌詞配 YouTube 練習(kuromoji 瀏覽器端漢字→假名、Worker 零外部 API)。SvelteKit 2 + Svelte 5 + Drizzle + D1/KV + Better Auth;pnpm workspace。3 個工作日 62 commits、約 26,000 行、470 個測試;7 個 worktree subagent 平行開發同日合併。伺服器端以前端 log 重算分數 + 6 條 anticheat 規則;歌詞版權設計(查證 JASRAC / 著作權法 90-4:共享時間軸只存每行 SHA-256、通知取下、三振)。",
+      "links": [
+        {
+          "label": "Live",
+          "href": "https://pachipachi.shunzz.com"
+        }
+      ],
+      "lead": "日文打字練習，3 個工作日、470 測試;純 TS 假名判定引擎、伺服器端 anticheat、歌詞版權設計"
+    },
+    {
       "name": "Career Agent — AI 求職助手",
       "period": "2026/06 – 進行中",
-      "desc": "上傳履歷 → AI 診斷 → 爬取職缺 → 語意層契合度排序(分數 + 理由 + 缺少技能)→ 客製求職信 → 應徵追蹤;含雲端多人版與地端個人助理兩套架構。FastAPI + MongoDB + Claude API + Playwright;React + TS + Mantine;3 天 73 commits,Threads 介紹貼文瀏覽破萬、有真實使用者。全程以 Claude Code + superpowers 的 agentic 工作流完成:我負責需求、架構、任務拆解與審查。",
+      "desc": "上傳履歷 → AI 診斷 → 爬取職缺 → 語意層契合度排序(分數 + 理由 + 缺少技能)→ 客製求職信 → 投遞看板;curl_cffi 模擬 Chrome TLS 指紋繞過 WAF、兩階段節流、Google 登入 + 每日額度、LLM provider 抽象層。地端版 career-sentinel:讀 104 登入態(rebrowser-playwright)、「求職總指揮」tool-use 聊天 agent、面試準備、薪資行情、token 計費;agent 不寫入 104。FastAPI + MongoDB + Claude API;React + TS + Mantine;543 commits、252 測試;後端 Cloud Run。Threads 介紹貼文瀏覽破萬、有真實使用者。",
       "links": [
-        { "label": "Live", "href": "https://jobtracker.shunzz.com" },
-        { "label": "GitHub", "href": "https://github.com/m124578n/career_agent" }
-      ]
+        {
+          "label": "Live",
+          "href": "https://jobtracker.shunzz.com"
+        },
+        {
+          "label": "GitHub",
+          "href": "https://github.com/m124578n/career_agent"
+        }
+      ],
+      "lead": "AI 求職助手:診斷 → 爬職缺 → 契合度 → 求職信;543 commits、Threads 貼文破萬瀏覽、有真實使用者"
+    },
+    {
+      "name": "落腳筆記 Loka Note(rentmap)— 找房決策工具",
+      "period": "2026/09 – 進行中(自用、未部署)",
+      "desc": "地址即報告:通勤(TDX 公車/捷運 + OSM 路網 Dijkstra 機車/汽車)、租金與買賣實價登錄行情、房貸與每月成本、生活機能(OSM Overpass)、災害潛勢(淹水 / 液化)、治安(警政署竊盜)、垃圾車、YouBike;收藏看板與比較表;期間制付費方案與 entitlements。React 19 + TanStack + Hono + D1 + Drizzle、Zod 前後端共用、Vitest 雙 runtime(workerd / Node);約 23,000 行 TS、8 個開發日。產品轉向(法律風險驅動):研究公平會處分案例後停止採集房源網站，房源改由使用者自帶，產品只賣建在可商用開放資料上的分析層。",
+      "links": [],
+      "lead": "地址即報告的找房決策工具:通勤、行情、災害、治安;因法律風險轉向不抓房源、只賣分析層"
     },
     {
       "name": "酸脆 — Threads AI 吐槽產生器",
-      "period": "2026",
+      "period": "2026/08",
       "desc": "病毒式成長迴圈設計(分享解鎖隱藏風格);TypeScript npm workspaces monorepo:React 前端、Cloudflare Workers + Hono + KV、爬取層可抽換(自架 GraphQL 爬蟲 / 第三方 API fallback);四個 package 各有 vitest 測試;內建反捏造與人身攻擊護欄。1 天 67 commits。",
-      "links": []
-    },
-    {
-      "name": "每日工作紀錄系統",
-      "period": "2026",
-      "desc": "Flask + SQLAlchemy;完整 spec-driven 流程(design spec → implementation plan → TDD)，約 2,100 行、62 個測試、單日完成。",
-      "links": []
+      "links": [
+        {
+          "label": "Live",
+          "href": "https://suancui.shunzz.com"
+        }
+      ],
+      "lead": "Threads AI 吐槽產生器，1 天 67 commits;Workers + Hono + KV、病毒迴圈與反捏造護欄"
     },
     {
       "name": "iThome 鐵人賽 2023:Django 原始碼深度解析",
       "period": "2023/09 – 2023/10",
       "desc": "30 天系列文章，從常用 command 與 API 出發，追蹤 Django 接收 request 的流程、ORM 與資料庫互動、Middleware 等內部機制。",
-      "links": [{ "label": "Blog", "href": "https://m124578n.github.io" }]
+      "links": [
+        {
+          "label": "Blog",
+          "href": "https://m124578n.github.io"
+        }
+      ],
+      "lead": "30 天 Django 原始碼系列文章:request 流程、ORM、Middleware"
     },
     {
       "name": "其他",
-      "desc": "中央氣象署未公開 API 逆向爬蟲(颱風暴風圈機率)、Text-to-SQL 實驗(Vanna + Wren Engine 語意層)、個人 RAG agent(chromadb);Hexo 個人技術部落格 56+ 篇。",
-      "links": []
+      "period": "2026",
+      "desc": "即時公車 Android widget PoC(Flutter + Kotlin 原生背景服務 + TDX，實機每分鐘更新 30/30 通過);Lootfall(Godot 4 roguelite M0–M5 + 網頁放置版 1 天);Kapp 韓語單字卡(Flutter + SM-2，2 天);每日工作紀錄系統(Flask，62 測試，1 天);中央氣象署未公開 API 逆向爬蟲;個人 RAG agent(chromadb);Hexo 個人技術部落格 56+ 篇。",
+      "links": [],
+      "lead": "公車 widget PoC、Godot roguelite、Flutter 單字卡、每日工作紀錄、氣象署 API 逆向、RAG agent、部落格 56+ 篇"
     }
   ],
   "skills": [
-    { "group": "語言", "items": ["Python(主力)", "TypeScript", "C# / .NET 8", "SQL(SQL Server / Synapse / PostgreSQL)", "Bicep / Terraform"] },
-    { "group": "後端", "items": ["FastAPI", "Flask", "Django", "Starlette", "Hono", "SQLAlchemy 2 + Alembic", "Celery", "async(asyncio / asyncpg / motor)", "RESTful API", "SSE / WebSocket"] },
-    { "group": "前端", "items": ["React 18/19 + TS", "Vite", "TanStack(Query / Table / Router / Virtual)", "Tailwind", "zod", "Mantine"] },
-    { "group": "AI / LLM", "items": ["Claude API", "Azure OpenAI", "GPT-4 / Gemini", "Google ADK", "LiteLLM", "MCP(自建 server)", "RAG / chromadb", "Prompt Engineering", "Claude Skills + evals", "FFmpeg / Wav2Lip / TTS", "token 成本控制"] },
-    { "group": "雲端 / DevOps", "items": ["Azure(DevOps Pipelines、Bicep、Terraform、Synapse、Data Factory、Container Apps、Key Vault、Private Endpoint)", "Cloudflare(Workers / Pages / KV)", "Docker", "Git LFS / git worktree", "GitLab CI", "uv / ruff"] },
-    { "group": "ML", "items": ["LightGBM", "CatBoost", "Optuna", "scikit-learn"] },
-    { "group": "爬蟲", "items": ["Playwright", "Selenium", "Requests / curl_cffi", "BeautifulSoup", "反爬應對"] },
-    { "group": "測試 / 架構", "items": ["pytest(asyncio / respx)", "vitest + Testing Library", "xUnit", "TDD", "UAT smoke / acceptance tests", "Clean Architecture", "Repository Pattern", "Design Patterns"] }
+    {
+      "group": "語言",
+      "items": [
+        "Python(主力)",
+        "TypeScript",
+        "C# / .NET 8–10",
+        "SQL(SQL Server / Synapse / PostgreSQL / SQLite / D1)",
+        "Bicep / Terraform",
+        "GDScript / Dart"
+      ]
+    },
+    {
+      "group": "後端",
+      "items": [
+        "FastAPI",
+        "Flask",
+        "Django",
+        "Starlette",
+        "Hono",
+        "SQLAlchemy 2 + Alembic",
+        "Drizzle",
+        ".NET BackgroundService",
+        "Celery",
+        "async(asyncio / asyncpg / motor)",
+        "RESTful API",
+        "SSE / WebSocket"
+      ]
+    },
+    {
+      "group": "前端",
+      "items": [
+        "React 18/19 + TS",
+        "Svelte 5 / SvelteKit 2",
+        "Vite",
+        "TanStack(Query / Table / Router / Virtual)",
+        "Tailwind 4",
+        "zod",
+        "Mantine",
+        "MapLibre GL",
+        "PWA",
+        "Streamlit / Gradio"
+      ]
+    },
+    {
+      "group": "AI / LLM",
+      "items": [
+        "Claude API",
+        "Azure OpenAI",
+        "Microsoft Foundry(Claude Sonnet / Opus)",
+        "GPT-4 / Gemini",
+        "Google ADK",
+        "LiteLLM",
+        "MCP(自建 gateway + server)",
+        "Text-to-SQL(sqlglot、語意模型、eval 體系)",
+        "RAG / chromadb",
+        "Prompt 治理",
+        "Claude Skills + evals",
+        "Claude Code mod",
+        "subagent 平行開發",
+        "FFmpeg / Wav2Lip / TTS",
+        "token 成本控制"
+      ]
+    },
+    {
+      "group": "雲端 / DevOps",
+      "items": [
+        "Azure(DevOps Pipelines、Bicep、Terraform、Synapse、Data Factory、App Service、Storage Queue、Container Apps、Key Vault、Private Endpoint、Azure ML)",
+        "Cloudflare(Workers / Pages / D1 / KV / Workers Builds)",
+        "Google Cloud Run",
+        "Docker",
+        "Git LFS / git worktree",
+        "GitLab CI",
+        "uv / ruff / pnpm workspace"
+      ]
+    },
+    {
+      "group": "資料 / 可靠性",
+      "items": [
+        "Synapse CTAS / HASH 分佈",
+        "執行計畫與索引 seek 診斷",
+        "applock 併發控制",
+        "queue / poison / heartbeat 模式",
+        "SRE 告警去重與 runbook",
+        "Teams Adaptive Card"
+      ]
+    },
+    {
+      "group": "ML",
+      "items": [
+        "LightGBM",
+        "CatBoost",
+        "Optuna",
+        "scikit-learn"
+      ]
+    },
+    {
+      "group": "爬蟲",
+      "items": [
+        "Playwright / rebrowser-playwright",
+        "curl_cffi(TLS 指紋)",
+        "Selenium",
+        "Requests",
+        "BeautifulSoup",
+        "反爬與限速策略"
+      ]
+    },
+    {
+      "group": "測試 / 架構",
+      "items": [
+        "pytest(asyncio / respx)",
+        "vitest(含 workerd runtime)",
+        "Playwright e2e",
+        "xUnit",
+        "GUT",
+        "TDD",
+        "UAT smoke / acceptance tests",
+        "LLM eval(gold / behavior / 捏造檢查)",
+        "Clean Architecture",
+        "Repository Pattern",
+        "Design Patterns"
+      ]
+    }
   ],
   "education": [
-    { "school": "資策會(勞動力發展署)AI 雲端網頁應用開發養成班", "degree": "全職密集訓練 6 個月", "period": "2021/12 – 2022/05" },
-    { "school": "文藻外語大學", "degree": "日本語文學系 學士", "period": "2016/09 – 2020/06" }
+    {
+      "school": "資策會(勞動力發展署)AI 雲端網頁應用開發養成班",
+      "degree": "全職密集訓練 6 個月",
+      "period": "2021/12 – 2022/05"
+    },
+    {
+      "school": "文藻外語大學",
+      "degree": "日本語文學系 學士",
+      "period": "2016/09 – 2020/06"
+    }
   ],
   "languages": [
-    { "name": "中文", "level": "母語" },
-    { "name": "日文", "level": "JLPT N1(聽/讀/寫 精通，說 中等)" },
-    { "name": "英文", "level": "技術文件讀寫，Dev.to / 英文 spec 撰寫" }
+    {
+      "name": "中文",
+      "level": "母語"
+    },
+    {
+      "name": "日文",
+      "level": "JLPT N1(聽/讀/寫 精通，說 中等)"
+    },
+    {
+      "name": "英文",
+      "level": "技術文件讀寫，Dev.to / 英文 spec 撰寫"
+    }
   ],
   "footer": {
     "email": "m23568n@gmail.com",

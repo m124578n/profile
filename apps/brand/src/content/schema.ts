@@ -46,7 +46,7 @@ export const siteSchema = z.object({
         links: z.array(link),
         featured: z.boolean().default(false),
       }),
-    ).length(4),
+    ).min(4).max(8),
   }),
   proof: z.object({
     heading: z.string(),
