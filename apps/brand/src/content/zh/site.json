@@ -275,6 +275,40 @@
         "featured": false
       },
       {
+        "name": "落腳筆記 Loka Note",
+        "tagline": "找房決策工具:輸入地址 → 通勤時間(公車/捷運 + 機車/汽車路網)→ 租金與買賣行情 → 房貸與每月成本 → 災害潛勢、治安、生活機能 → 收藏與比較",
+        "story": "原本想抓房源網站，研究公平會處分案例後判斷法律風險太高，改成房源由使用者自帶，產品只賣建在可商用開放資料上的分析層。通勤用 OSM 路網自己跑 Dijkstra;前後端共用 Zod schema，Vitest 同時跑 workerd 與 Node 兩種 runtime。",
+        "tags": [
+          "React 19",
+          "TanStack",
+          "Hono",
+          "Cloudflare D1",
+          "Drizzle",
+          "OpenStreetMap"
+        ],
+        "stats": [
+          {
+            "value": "10",
+            "label": "開發日"
+          },
+          {
+            "value": "138",
+            "label": "commits"
+          },
+          {
+            "value": "23K",
+            "label": "行 TS"
+          }
+        ],
+        "links": [
+          {
+            "label": "Live",
+            "href": "https://lokanote.shunzz.com"
+          }
+        ],
+        "featured": false
+      },
+      {
         "name": "MCP Gateway",
         "tagline": "把企業內部 API 統一封裝成 MCP tools，讓各家 AI coding agent 經單一入口安全存取",
         "story": "設計重點:per-client 授權、SSRF 防護、上游憑證加密、稽核記錄含敏感參數遮罩，input 與 output 都留痕。工具目錄存 DB，審核後即時上線、免改碼免重啟;後台一頁生成八種 AI client 的連線設定。",
@@ -334,39 +368,6 @@
           }
         ],
         "links": [],
-        "featured": false
-      },
-      {
-        "name": "酸脆",
-        "tagline": "Threads AI 吐槽產生器:輸入帳號 → 四風格吐槽圖卡 → 分享解鎖隱藏風格",
-        "story": "產品思維與失敗學習:發現 Threads 反爬會回 200 但內容閹割、導致 AI 捏造人格，於是把「不捏造」寫進產品鐵律。上線後觸及不如 Career Agent——工具解決真問題，比娛樂產品更會傳播。",
-        "tags": [
-          "Cloudflare Workers",
-          "Hono",
-          "KV",
-          "React",
-          "npm workspaces"
-        ],
-        "stats": [
-          {
-            "value": "1 天",
-            "label": "上線"
-          },
-          {
-            "value": "67",
-            "label": "commits"
-          },
-          {
-            "value": "4",
-            "label": "packages 各有測試"
-          }
-        ],
-        "links": [
-          {
-            "label": "Live",
-            "href": "https://suancui.shunzz.com"
-          }
-        ],
         "featured": false
       }
     ]

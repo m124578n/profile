@@ -275,6 +275,40 @@
         "featured": false
       },
       {
+        "name": "Loka Note (落腳筆記)",
+        "tagline": "Housing decision tool: enter an address → commute times (bus/metro + scooter/car road graph) → rent and sale price benchmarks → mortgage and monthly cost → hazards, crime, amenities → favorites and comparison",
+        "story": "The first plan was to scrape listing sites. After reviewing fair-trade rulings I judged the legal risk too high: users bring their own listings and the product sells only the analysis layer built on commercially usable open data. Commute times run my own Dijkstra on the OSM road graph; Zod schemas are shared across client and server, and Vitest runs in both workerd and Node.",
+        "tags": [
+          "React 19",
+          "TanStack",
+          "Hono",
+          "Cloudflare D1",
+          "Drizzle",
+          "OpenStreetMap"
+        ],
+        "stats": [
+          {
+            "value": "10",
+            "label": "dev days"
+          },
+          {
+            "value": "138",
+            "label": "commits"
+          },
+          {
+            "value": "23K",
+            "label": "lines of TS"
+          }
+        ],
+        "links": [
+          {
+            "label": "Live",
+            "href": "https://lokanote.shunzz.com"
+          }
+        ],
+        "featured": false
+      },
+      {
         "name": "MCP Gateway",
         "tagline": "Wraps internal enterprise APIs as MCP tools so any AI coding agent reaches them safely through one entry point",
         "story": "Design focus: per-client auth, SSRF protection, encrypted upstream credentials, audit logs with sensitive-parameter masking — both input and output are recorded. Tool catalog lives in a DB; approved tools go live without code changes or restarts. One admin page generates connection configs for eight AI clients.",
@@ -334,39 +368,6 @@
           }
         ],
         "links": [],
-        "featured": false
-      },
-      {
-        "name": "Suancui (酸脆)",
-        "tagline": "Threads AI roast generator: enter a handle → four roast styles as share cards → share to unlock hidden styles",
-        "story": "Product thinking and a lesson in failure: Threads' anti-scraping returned 200 with gutted content, so the AI fabricated personalities. \"Never fabricate\" became a product rule. It spread less than Career Agent — tools that solve real problems travel further than entertainment.",
-        "tags": [
-          "Cloudflare Workers",
-          "Hono",
-          "KV",
-          "React",
-          "npm workspaces"
-        ],
-        "stats": [
-          {
-            "value": "1 day",
-            "label": "to launch"
-          },
-          {
-            "value": "67",
-            "label": "commits"
-          },
-          {
-            "value": "4",
-            "label": "packages, each tested"
-          }
-        ],
-        "links": [
-          {
-            "label": "Live",
-            "href": "https://suancui.shunzz.com"
-          }
-        ],
         "featured": false
       }
     ]

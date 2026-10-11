@@ -75,7 +75,7 @@
   "positioning": [
     {
       "title": "用 AI 交付產品",
-      "body": "企業級專案 + 5 個上線 side project，速度與品質都有 git 紀錄:Text-to-SQL 從 PoC 到正式服務、SRE-agent 5 週獨立完成、任務排程器一天 1,190 測試、拉麵地圖第一天上線。"
+      "body": "企業級專案 + 6 個上線 side project，速度與品質都有 git 紀錄:Text-to-SQL 從 PoC 到正式服務、SRE-agent 5 週獨立完成、任務排程器一天 1,190 測試、拉麵地圖第一天上線。"
     },
     {
       "title": "管理 AI 的方法論",
@@ -335,11 +335,16 @@
       "lead": "AI 求職助手:診斷 → 爬職缺 → 契合度 → 求職信;543 commits、Threads 貼文破萬瀏覽、有真實使用者"
     },
     {
-      "name": "落腳筆記 Loka Note(rentmap)— 找房決策工具",
-      "period": "2026/09 – 進行中(自用、未部署)",
-      "desc": "地址即報告:通勤(TDX 公車/捷運 + OSM 路網 Dijkstra 機車/汽車)、租金與買賣實價登錄行情、房貸與每月成本、生活機能(OSM Overpass)、災害潛勢(淹水 / 液化)、治安(警政署竊盜)、垃圾車、YouBike;收藏看板與比較表;期間制付費方案與 entitlements。React 19 + TanStack + Hono + D1 + Drizzle、Zod 前後端共用、Vitest 雙 runtime(workerd / Node);約 23,000 行 TS、8 個開發日。產品轉向(法律風險驅動):研究公平會處分案例後停止採集房源網站，房源改由使用者自帶，產品只賣建在可商用開放資料上的分析層。",
-      "links": [],
-      "lead": "地址即報告的找房決策工具:通勤、行情、災害、治安;因法律風險轉向不抓房源、只賣分析層"
+      "name": "落腳筆記 Loka Note — 找房決策工具",
+      "period": "2026/09 – 2026/10 上線",
+      "desc": "地址即報告:通勤(TDX 公車/捷運 + OSM 路網 Dijkstra 機車/汽車)、租金與買賣實價登錄行情、房貸與每月成本、生活機能(OSM Overpass)、災害潛勢(淹水 / 液化)、治安(警政署竊盜)、垃圾車、YouBike;收藏看板與比較表;期間制付費方案與 entitlements。React 19 + TanStack + Hono + D1 + Drizzle、Zod 前後端共用、Vitest 雙 runtime(workerd / Node);約 23,000 行 TS、10 個開發日 138 commits。產品轉向(法律風險驅動):研究公平會處分案例後停止採集房源網站，房源改由使用者自帶，產品只賣建在可商用開放資料上的分析層。",
+      "links": [
+        {
+          "label": "Live",
+          "href": "https://lokanote.shunzz.com"
+        }
+      ],
+      "lead": "輸入地址即出找房報告:通勤、行情、災害、治安;因法律風險轉向不抓房源、只賣分析層"
     },
     {
       "name": "酸脆 — Threads AI 吐槽產生器",

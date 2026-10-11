@@ -75,7 +75,7 @@
   "positioning": [
     {
       "title": "Ship products with AI",
-      "body": "Enterprise projects plus five live side projects, all in the git history: Text-to-SQL from PoC to production, an SRE triage agent built solo in 5 weeks, a job scheduler with 1,190 tests in a day, a ramen map live on day one."
+      "body": "Enterprise projects plus six live side projects, all in the git history: Text-to-SQL from PoC to production, an SRE triage agent built solo in 5 weeks, a job scheduler with 1,190 tests in a day, a ramen map live on day one."
     },
     {
       "title": "Manage how AI works",
@@ -335,11 +335,16 @@
       "lead": "AI job-search assistant: diagnosis → crawl → fit ranking → cover letters; 543 commits, 10K+ post views, real users"
     },
     {
-      "name": "Loka Note (rentmap) — housing decision tool",
-      "period": "Sep 2026 – ongoing (personal, not deployed)",
-      "desc": "Address-level reports: commute (TDX bus/metro + OSM road-graph Dijkstra for scooter/car), rent and sale transaction-price benchmarks, mortgage and monthly cost, amenities (OSM Overpass), hazards (flood / liquefaction), crime (police theft data), garbage-truck routes, YouBike; favorites board and comparison table; period-based paid plans with entitlements. React 19 + TanStack + Hono + D1 + Drizzle, Zod shared across client and server, Vitest in two runtimes (workerd / Node); ~23,000 lines TS over 8 development days. Product pivot driven by legal risk: after reviewing fair-trade rulings, stopped scraping listing sites — users bring their own listings and the product sells only the analysis layer built on commercially usable open data.",
-      "links": [],
-      "lead": "Address-level housing decision reports: commute, prices, hazards, crime; pivoted off listing scraping over legal risk"
+      "name": "Loka Note — housing decision tool",
+      "period": "Sep 2026 – live Oct 2026",
+      "desc": "Address-level reports: commute (TDX bus/metro + OSM road-graph Dijkstra for scooter/car), rent and sale transaction-price benchmarks, mortgage and monthly cost, amenities (OSM Overpass), hazards (flood / liquefaction), crime (police theft data), garbage-truck routes, YouBike; favorites board and comparison table; period-based paid plans with entitlements. React 19 + TanStack + Hono + D1 + Drizzle, Zod shared across client and server, Vitest in two runtimes (workerd / Node); ~23,000 lines TS, 138 commits over 10 development days. Product pivot driven by legal risk: after reviewing fair-trade rulings, stopped scraping listing sites — users bring their own listings and the product sells only the analysis layer built on commercially usable open data.",
+      "links": [
+        {
+          "label": "Live",
+          "href": "https://lokanote.shunzz.com"
+        }
+      ],
+      "lead": "Address-to-report housing decisions: commute, prices, hazards, crime; pivoted off listing scraping over legal risk"
     },
     {
       "name": "Suancui (酸脆) — Threads AI roast generator",
